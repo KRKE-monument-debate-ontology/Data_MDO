@@ -57,16 +57,19 @@ classes = {
     "governmentOrganization": schema.GovernmentOrganization,
     "instant": time.Instant,
     "timeInterval": tip.TimeInterval,
-    "place": crm.E53,
+    "place": schema.Place,
     "physicalFeature": crm.E26,
     "contextualMaterial": mdo.ContextualMaterial,
     "debateSetting": mdo.DebateSetting,
-    "role": pr.Role
+    "role": pr.Role,
+    "relocation": mdo.Relocation,
+    "replacement": mdo.Replacement,
+    "actionUndefined": mdo.ActionUndefined
 }
 
 
 # object properties
-op = ["crm:P62", "schema:location", "dcterms:creator", "schema:funder", "dcterms:subject", "crm:P17", "crm:P108", "mdo:hasLegacyImpact", "schema:performerIn", "time:hasBeginning", "time:hasEnd", "tip:includesEvent", "tip:forEntity", "tip:atTime", "mdo:justifiedWithValue", "ceon-actor:participatingActor", "ceon-actor:participatingActor", "mdo:holdsValue", "schema:knowsAbout", "dio:supports", "mdo:hasStance", "mdo:emergesFrom", "mdo:generates", "mdo:resultsIn", "mdo:reflectsHeritageOf", "crm:P56", "tip:hasRole", "tip:isSettingFor", "mdo:isContextualizedBy"]
+op = ["crm:P62", "schema:location", "schema:creator", "schema:funder", "dcterms:subject", "crm:P17", "crm:P108", "mdo:hasLegacyImpact", "schema:performerIn", "time:hasBeginning", "time:hasEnd", "tip:includesEvent", "tip:forEntity", "tip:atTime", "mdo:justifiedWithValue", "ceon-actor:participatingActor", "ceon-actor:participatingActor", "mdo:holdsValue", "schema:knowsAbout", "dio:supports", "mdo:hasStance", "mdo:emergesFrom", "mdo:generates", "mdo:resultsIn", "mdo:reflectsHeritageOf", "crm:P56", "tip:hasRole", "tip:isSettingFor", "mdo:isContextualizedBy"]
 
 # initialize graph
 g = rdflib.Graph()
@@ -188,7 +191,8 @@ class_id_alignment = {
     "interval": "timeInterval",
     "feature": "physicalFeature",
     "setting": "debateSetting",
-    "contextualmaterial": "contextualMaterial"
+    "contextualmaterial": "contextualMaterial",
+    "undefined": "actionUndefined"
 }
 
 # function for aligning ids to class names
@@ -250,6 +254,13 @@ g.add((dcterms.identifier, RDF.type, OWL.DatatypeProperty))
 g.add((dcterms.title, RDF.type, OWL.DatatypeProperty))
 g.add((dcterms.date, RDF.type, OWL.DatatypeProperty))
 g.add((time.inXSDgYearMonth, RDF.type, OWL.DatatypeProperty))
+
+# add crm type for ActionProposal
+g.add((mdo.ActionProposal, crm.P2, mdo.Relocation))
+g.add((mdo.ActionProposal, crm.P2, mdo.Removal))
+g.add((mdo.ActionProposal, crm.P2, mdo.Keeping))
+g.add((mdo.ActionProposal, crm.P2, mdo.Replacement))
+g.add((mdo.ActionProposal, crm.P2, mdo.Contextualization))
 
 # turtle serialization
 print(g.serialize(destination="md-ontology/ontology.ttl", format="turtle"))
