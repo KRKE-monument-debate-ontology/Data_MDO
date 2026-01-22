@@ -14,13 +14,13 @@
 @prefix tip: <http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colston_2> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_2> a mdo:ControversialFact ;
     rdfs:label "During the 12 years Colston was involved with RAC, about 84,500 Africans enslaved people were illegally transported, including many children. Many were branded on the chest and around 20,000 died before the arrival."^^xsd:string ;
-    dcterms:identifier "controversialFacts_colston_2"^^xsd:string .
+    dcterms:identifier "controversialFact_colston_2"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colston_3> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_3> a mdo:ControversialFact ;
     rdfs:label "Even after leaving the Royal African Company, Colston continued to defend the slave trade; he was elected to Parliament and used his political position to block any attempts to abolish it."^^xsd:string ;
-    dcterms:identifier "controversialFacts_colston_3"^^xsd:string .
+    dcterms:identifier "controversialFact_colston_3"^^xsd:string .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversy/controversy_colbert> a mdo:Controversy ;
     rdfs:label "The controversy triggered by Jean Baptiste Colbert in Palais Bourbon (Paris' National Assembly)"^^xsd:string ;
@@ -108,7 +108,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_stalin> a mdo:HistoricalFigure ;
     rdfs:label "Iosif Stalin (1878-1953)"^^xsd:string ;
     dcterms:identifier "historicalFigure_stalin"^^xsd:string ;
-    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_stalin_1> ;
+    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1> ;
     mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_industrialisation>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_personality_cult>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_state_socialism> .
@@ -502,7 +502,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colbert_1> a mdo:Argument ;
     rdfs:label "The statue of Jean-Baptiste Colbert should be removed as it commemorates a figure who institutionalized slavery through the Code Noir, legitimizing the exploitation and brutal treatment of enslaved people in French colonies. Keeping the statue in a prominent public space perpetuates the symbolic presence of systemic racism and colonial violence."^^xsd:string ;
     dcterms:identifier "argument_colbert_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colbert_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colbert_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery>,
@@ -517,7 +517,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colbert_2> a mdo:Argument ;
     rdfs:label "The statue of Jean-Baptiste Colbert should be preserved as it is because it is not an isolated monument but part of a group of four statues commissioned in 1806 under Napoleon, depicting major servants of the state. The ensemble was conceived to express historical continuity between the monarchy and the Napoleonic Empire; removing Colbert would disrupt this deliberate political and artistic composition and alter a monument designed as a unified whole."^^xsd:string ;
     dcterms:identifier "argument_colbert_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colbert_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colbert_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery>,
@@ -533,7 +533,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colombo_1> a mdo:Argument ;
     rdfs:label "The statue of Cristoforo Colombo should be removed from our campus, as it reinforces racism, prejudice and violence, and it should be replaced with a monument celebrating peace, inclusion or Indigenous heritage."^^xsd:string ;
     dcterms:identifier "argument_colombo_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colombo_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_expansion>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
@@ -546,7 +546,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colombo_2> a mdo:Argument ;
     rdfs:label "The statue should preserved in its location, because it honors exploration and the struggles of Italian immigrants. Removing it would mean losing the historical memory of Cristoforo Colombo's expedition and of the immigration phenomenon in the XV century."^^xsd:string ;
     dcterms:identifier "argument_colombo_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colombo_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_expansion>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
@@ -561,8 +561,8 @@
     dcterms:identifier "argument_gandhi_1"^^xsd:string ;
     dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/concept/concept_caste_system>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/concept/concept_nonviolent_resistance>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_gandhi_1>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_gandhi_2>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_2>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_civil_rights>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
@@ -580,8 +580,8 @@
     dcterms:identifier "argument_gandhi_2"^^xsd:string ;
     dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/concept/concept_caste_system>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/concept/concept_nonviolent_resistance>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_gandhi_1>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_gandhi_2>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_2>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_civil_rights>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
@@ -596,7 +596,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_savile_1> a mdo:Argument ;
     rdfs:label "The statue should be preserved as a historical record of Savile’s public media career and the social mechanisms that enabled celebrity admiration, allowing future audiences to critically examine how cultural authority was constructed and later dismantled."^^xsd:string ;
     dcterms:identifier "argument_savile_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_sevile_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_sevile_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_media_culture>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_pedophilia>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sex_based_violence>,
@@ -612,7 +612,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_savile_2> a mdo:Argument ;
     rdfs:label "The statue should be removed as it doesn't provide proper historical context and its continued presence risks legitimizing or normalizing abuse by celebrating celebrity status without acknowledging the harm associated with it."^^xsd:string ;
     dcterms:identifier "argument_savile_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_sevile_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_sevile_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_media_culture>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_pedophilia>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sex_based_violence>,
@@ -628,7 +628,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_stalin_1> a mdo:Argument ;
     rdfs:label "The statue of Colston should be preserved as a historical artifact documenting the role of monumental propaganda in authoritarian regimes and the political history of post-war Eastern Europe."^^xsd:string ;
     dcterms:identifier "argument_stalin_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_stalin_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_authoritarianism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_communist_regime>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism>,
@@ -644,7 +644,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_stalin_2> a mdo:Argument ;
     rdfs:label "The statue of Iosif Stalin should be removed as it commemorates a political leader responsible for mass repression, state violence, and human rights abuses, making its presence incompatible with democratic values."^^xsd:string ;
     dcterms:identifier "argument_stalin_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_stalin_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_communist_regime>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism,heritage_authoritarianism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_political_propaganda>,
@@ -660,7 +660,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_wollstonecraft_1> a mdo:Argument ;
     rdfs:label "The statue should be revoved because its nude, abstract design is disrespectful, objectifying, and fails to properly honor Mary Wollstonecraft’s intellectual achievements and identity"^^xsd:string ;
     dcterms:identifier "argument_wollstonecraft_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_wollstonecraft_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sexism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sexualisation>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_wollstonecraft>,
@@ -673,7 +673,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_wollstonecraft_2> a mdo:Argument ;
     rdfs:label "The statue should be preserved because it powerfully symbolizes the birth and ongoing struggle of feminism, encourages public debate, and celebrates collective female empowerment rather than a single heroic figure"^^xsd:string ;
     dcterms:identifier "argument_wollstonecraft_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_wollstonecraft_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sexism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sexualisation>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_wollstonecraft>,
@@ -1504,7 +1504,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_2> a mdo:Argument ;
     rdfs:label "The statue of Colston should be preserved in its original form and location because it is a historical monument that reflects the values and commemorative practices of the period in which it was erected. Removing or altering it would impose present-day moral judgments on the past and risk erasing historical complexity."^^xsd:string ;
     dcterms:identifier "argument_colston_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colston_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slave_trading>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_edward_colston>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
@@ -1516,7 +1516,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_hagenbeck_1> a mdo:Argument ;
     rdfs:label "Hagenbeck statue clearly commemorates his innovations in zoo design, which is without any doubt a remarkable accomplishment. The statue, which has also a great artistic value, should remain in place and be contextualized by additional informative material or complemented by a memorial dedicated to Hagenbeck's victioms, so as to enable critical reflection on Hagenbeck and our colonial history"^^xsd:string ;
     dcterms:identifier "argument_hagenbeck_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_hagenbeck_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_hagenbeck_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_innovation>,
@@ -1531,7 +1531,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_hagenbeck_2> a mdo:Argument ;
     rdfs:label "Hagenbeck statue should be removed as it commemorates a figure who exploited other human beings, without acknowledging the victims who were exhibited by Hagenbeck in shows that enforced racist assumptions on white supremacy"^^xsd:string ;
     dcterms:identifier "argument_hagenbeck_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_hagenbeck_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_hagenbeck_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_innovation>,
@@ -1546,7 +1546,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_1> a mdo:Argument ;
     rdfs:label "The statue of Vieira should be removed because, despite his defense of Indigenous peoples, he never condemned the African slave trade and upheld a paternalistic view of colonized peoples."^^xsd:string ;
     dcterms:identifier "argument_vieira_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_vieira_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_vieira_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonial_paternalism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_indigenous_protection>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery>,
@@ -1561,7 +1561,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_2> a mdo:Argument ;
     rdfs:label "The Vieira statue should remain as part of Portugal’s historical and cultural heritage. Vieira was a Jesuit priest, diplomat, and advocate for Indigenous peoples, and contributed significantly to literature and diplomacy."^^xsd:string ;
     dcterms:identifier "argument_vieira_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_vieira_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_vieira_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonial_paternalism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_indigenous_protection>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery>,
@@ -1572,13 +1572,13 @@
     mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_montanelli_2> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_2> a mdo:ControversialFact ;
     rdfs:label "Montanelli took part in the colonial wars in Eritrea and Ethiopia, actively supporting Italy’s expansionist project. During his time there he collaborated with Fascist propaganda, wrote articles defending the colonial enterprise, and participated personally in colonial practices"^^xsd:string ;
-    dcterms:identifier "controversialFacts_montanelli_2"^^xsd:string .
+    dcterms:identifier "controversialFact_montanelli_2"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_sevile_1> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_sevile_1> a mdo:ControversialFact ;
     rdfs:label "After his death, Jimmy Savile was accused of widespread sexual abuse of minors and adults, with investigations concluding that he had exploited his celebrity status to commit offences over several decades."^^xsd:string ;
-    dcterms:identifier "controversialFacts_sevile_1"^^xsd:string .
+    dcterms:identifier "controversialFact_sevile_1"^^xsd:string .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_1> a mdo:DebateSetting ;
     rdfs:label "Pepperdine University"^^xsd:string ;
@@ -1656,7 +1656,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_wollstonecraft> a mdo:HistoricalFigure ;
     rdfs:label "Mary Wollstonecraft (1759-1797)"^^xsd:string ;
     dcterms:identifier "historicalFigure_wollstonecraft"^^xsd:string ;
-    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_wollstonecraft_1> ;
+    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1> ;
     mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philosophy>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_women_rights>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_writing> .
@@ -1913,41 +1913,41 @@
     rdfs:label "Relocation"^^xsd:string ;
     dcterms:identifier "actionProposal_relocation"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colbert_1> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colbert_1> a mdo:ControversialFact ;
     rdfs:label "Colbert was responsible for laying the foundations of the Code Noir, a legal text that legitimised slavery and institutionalised the domination and brutal treatment of people in the French colonies."^^xsd:string ;
-    dcterms:identifier "controversialFacts_colbert_1"^^xsd:string .
+    dcterms:identifier "controversialFact_colbert_1"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colston_1> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1> a mdo:ControversialFact ;
     rdfs:label "Colston was a senior official of the Royal African Company (RAC), an organization that held the British monopoly on the British trade of enslaved persons."^^xsd:string ;
-    dcterms:identifier "controversialFacts_colston_1"^^xsd:string .
+    dcterms:identifier "controversialFact_colston_1"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_gandhi_1> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1> a mdo:ControversialFact ;
     rdfs:label "Racist and derogatory statements about Black Africans in early writings"^^xsd:string ;
-    dcterms:identifier "controversialFacts_gandhi_1"^^xsd:string .
+    dcterms:identifier "controversialFact_gandhi_1"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_gandhi_2> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_2> a mdo:ControversialFact ;
     rdfs:label "Casteist views and ambiguous position on the indian's caste system"^^xsd:string ;
-    dcterms:identifier "controversialFacts_gandhi_2"^^xsd:string .
+    dcterms:identifier "controversialFact_gandhi_2"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_hagenbeck_1> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_hagenbeck_1> a mdo:ControversialFact ;
     rdfs:label "Hagenbeck was known for his exhibitions of people, especially from Africa, which were brought in Germany and displayed in circuses and zoos"^^xsd:string ;
-    dcterms:identifier "controversialFacts_hagenbeck_1"^^xsd:string .
+    dcterms:identifier "controversialFact_hagenbeck_1"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_montanelli_1> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1> a mdo:ControversialFact ;
     rdfs:label "In his military service, during the fascist invasion of Ethiopia, Montanelli married through madamato and sexually assaulted a 12-year-old eritrean girl"^^xsd:string ;
-    dcterms:identifier "controversialFacts_montanelli_1"^^xsd:string .
+    dcterms:identifier "controversialFact_montanelli_1"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_stalin_1> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1> a mdo:ControversialFact ;
     rdfs:label "Stalin was responsible for mass political repression, including forced collectivisation, purges, and the establishment of the Gulag system, which led to widespread imprisonment, deportations, and millions of deaths."^^xsd:string ;
-    dcterms:identifier "controversialFacts_stalin_1"^^xsd:string .
+    dcterms:identifier "controversialFact_stalin_1"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_vieira_1> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_vieira_1> a mdo:ControversialFact ;
     rdfs:label "António Vieira publicly defended Indigenous peoples in Brazil against colonial abuses, yet he never condemned the African slave trade, implicitly accepting the enslavement of Africans within the Portuguese colonial system."^^xsd:string ;
-    dcterms:identifier "controversialFacts_vieira_1"^^xsd:string .
+    dcterms:identifier "controversialFact_vieira_1"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_wollstonecraft_1> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1> a mdo:ControversialFact ;
     rdfs:label "The sculpture of Mary Wollstonecraft caused controversy because its abstract design and depiction of a nude “everywoman” were seen by many as an inappropriate and disrespectful way to commemorate her intellectual and feminist legacy."^^xsd:string ;
-    dcterms:identifier "controversialFacts_wollstonecraft_1"^^xsd:string .
+    dcterms:identifier "controversialFact_wollstonecraft_1"^^xsd:string .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonial_paternalism> a skos:Concept ;
     rdfs:label "Colonial Paternalism"^^xsd:string ;
@@ -2000,21 +2000,21 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_antónio_vieira> a mdo:HistoricalFigure ;
     rdfs:label "António Vieira (1608-1697)"^^xsd:string ;
     dcterms:identifier "historicalFigure_antónio_vieira"^^xsd:string ;
-    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_vieira_1> ;
+    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_vieira_1> ;
     mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_advocacy>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_carl_hagenbeck> a mdo:HistoricalFigure ;
     rdfs:label "Carl Hagenbeck (1844-1913)"^^xsd:string ;
     dcterms:identifier "historicalFigure_carl_hagenbeck"^^xsd:string ;
-    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_hagenbeck_1> ;
+    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_hagenbeck_1> ;
     mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_animal_welfare>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_zoo_design> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_cristoforo_colombo> a mdo:HistoricalFigure ;
     rdfs:label "Cristoforo Colombo (1451-1506)"^^xsd:string ;
     dcterms:identifier "historicalFigure_cristoforo_colombo"^^xsd:string ;
-    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colombo_1> ;
+    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1> ;
     mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_exploration> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_edward_colston> a mdo:HistoricalFigure ;
@@ -2022,7 +2022,7 @@
     dcterms:identifier "historicalFigure_edward_colston"^^xsd:string ;
     schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/cf/cf_colston_2>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/cf/cf_colston_3>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colston_1> ;
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1> ;
     mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> .
 
@@ -2030,13 +2030,13 @@
     rdfs:label "Indro Montanelli (1909-2001)"^^xsd:string ;
     dcterms:identifier "historicalFigure_indro_montanelli"^^xsd:string ;
     schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/cf/cf_montanelli_2>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_montanelli_1> ;
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1> ;
     mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_journalism> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_jean_baptiste_colbert> a mdo:HistoricalFigure ;
     rdfs:label "Jean Baptiste Colbert (1619-1683)"^^xsd:string ;
     dcterms:identifier "historicalFigure_jean_baptiste_colbert"^^xsd:string ;
-    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colbert_1> ;
+    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colbert_1> ;
     mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_centralisation>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_mercantilism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_patronage> .
@@ -2044,7 +2044,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_jimmy_savile> a mdo:HistoricalFigure ;
     rdfs:label "Jimmy Savile (1926-2011)"^^xsd:string ;
     dcterms:identifier "historicalFigure_jimmy_savile"^^xsd:string ;
-    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_savile_1> ;
+    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_savile_1> ;
     mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_fundraising>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities>,
@@ -2053,8 +2053,8 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_mahatma_gandhi> a mdo:HistoricalFigure ;
     rdfs:label "Mahatma Gandhi (1869-1948)"^^xsd:string ;
     dcterms:identifier "historicalFigure_mahatma_gandhi"^^xsd:string ;
-    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_gandhi_1>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_gandhi_2> ;
+    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_2> ;
     mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_contested_racism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_indian_independence>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_nonviolent_resistance> .
@@ -2077,7 +2077,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colombo_1> a ceon-actor:Stakeholder ;
     rdfs:label "Maya Johnson, sociology junior and leader in the school’s Diversity and Inclusion group"^^xsd:string ;
     dcterms:identifier "stakeholder_colombo_1"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colombo_1>,
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_exploration> ;
     mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_colombo> ;
     mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
@@ -2281,7 +2281,7 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> a mdo:Argument ;
     rdfs:label "The statue of Colston should be removed because it celebrates a man who profited from the enslavement and brutal exploitation of tens of thousands of Africans. For the Black community and descendants of enslaved people in Bristol, it is a symbol of systemic racism.  The Colston statue should be removed from public space because it glorifies a man who profited from slavery. Relocating it to a museum, displayed damaged and unrestored, allows critical reflection on both his legacy and the protest against it, without continuing to honor oppression."^^xsd:string ;
     dcterms:identifier "argument_colston_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colston_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slave_trading>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_edward_colston>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
@@ -2293,8 +2293,8 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_montanelli_1> a mdo:Argument ;
     rdfs:label "The statue should be removed because it celebrates Indro Montanelli without providing proper historical context, overlooking his statements on colonialism and his marriage to a twelve-year-old Eritrean girl"^^xsd:string ;
     dcterms:identifier "argument_montanelli_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_montanelli_1>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_montanelli_2>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_2>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_freedom_of_press>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_pedophilia>,
@@ -2308,8 +2308,8 @@
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_montanelli_2> a mdo:Argument ;
     rdfs:label "The statue should be preserved to remember Indro Montanelli as he was one of the most famous Italian journalists of the twentieth century"^^xsd:string ;
     dcterms:identifier "argument_montanelli_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_montanelli_1>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_montanelli_2>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_2>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_freedom_of_press>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_pedophilia>,
@@ -2319,9 +2319,9 @@
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_montanelli> ;
     mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFacts/controversialFacts_colombo_1> a mdo:ControversialFacts ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1> a mdo:ControversialFact ;
     rdfs:label "Columbus was responsible for the enslavement of indigenous people in America and enforced a brutal government, because of which he was removed from his position"^^xsd:string ;
-    dcterms:identifier "controversialFacts_colombo_1"^^xsd:string .
+    dcterms:identifier "controversialFact_colombo_1"^^xsd:string .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_7> a mdo:DebateSetting ;
     rdfs:label "Trindade Coelho Square"^^xsd:string ;
