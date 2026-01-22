@@ -240,6 +240,16 @@ for sheet_name, df in sheets.items():
         raise  # re-raise so you see full traceback
     #print("AFTER generate_triples:", subjects_dict)
 
+# Declare object properties
+for prop_str in op:
+    pref, prop = prop_str.split(":", 1)
+    g.add((URIRef(namespaces[pref] + prop), RDF.type, OWL.ObjectProperty))
+
+# Declare data properties
+g.add((dcterms.identifier, RDF.type, OWL.DatatypeProperty))
+g.add((dcterms.title, RDF.type, OWL.DatatypeProperty))
+g.add((dcterms.date, RDF.type, OWL.DatatypeProperty))
+g.add((time.inXSDgYearMonth, RDF.type, OWL.DatatypeProperty))
 
 # turtle serialization
 print(g.serialize(destination="md-ontology/ontology.ttl", format="turtle"))

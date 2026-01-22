@@ -6,6 +6,7 @@
 @prefix dio: <https://w3id.org/dio#> .
 @prefix mdo: <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/> .
 @prefix ns1: <http://w3id.org/CEON/ontology/material/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pr: <http://www.ontologydesignpatterns.org/cp/owl/participantRole.owl> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema1: <http://schema.org/> .
@@ -13,6 +14,50 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix tip: <http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+tip:atTime a owl:ObjectProperty .
+
+tip:forEntity a owl:ObjectProperty .
+
+tip:hasRole a owl:ObjectProperty .
+
+tip:includesEvent a owl:ObjectProperty .
+
+tip:isSettingFor a owl:ObjectProperty .
+
+dcterms:creator a owl:ObjectProperty .
+
+dcterms:date a owl:DatatypeProperty .
+
+dcterms:identifier a owl:DatatypeProperty .
+
+dcterms:subject a owl:ObjectProperty .
+
+dcterms:title a owl:DatatypeProperty .
+
+schema1:funder a owl:ObjectProperty .
+
+schema1:knowsAbout a owl:ObjectProperty .
+
+schema1:location a owl:ObjectProperty .
+
+schema1:performerIn a owl:ObjectProperty .
+
+ceon-actor:participatingActor a owl:ObjectProperty .
+
+crm:P108 a owl:ObjectProperty .
+
+crm:P17 a owl:ObjectProperty .
+
+crm:P56 a owl:ObjectProperty .
+
+crm:P62 a owl:ObjectProperty .
+
+time:hasBeginning a owl:ObjectProperty .
+
+time:hasEnd a owl:ObjectProperty .
+
+time:inXSDgYearMonth a owl:DatatypeProperty .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_2> a mdo:ControversialFact ;
     rdfs:label "During the 12 years Colston was involved with RAC, about 84,500 Africans enslaved people were illegally transported, including many children. Many were branded on the chest and around 20,000 died before the arrival."^^xsd:string ;
@@ -101,6 +146,14 @@
     dcterms:identifier "discussion_wollstonecraft_1"^^xsd:string ;
     mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actionProposal/actionProposal_replace> .
 
+mdo:emergesFrom a owl:ObjectProperty .
+
+mdo:generates a owl:ObjectProperty .
+
+mdo:hasLegacyImpact a owl:ObjectProperty .
+
+mdo:hasStance a owl:ObjectProperty .
+
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_fascism> a skos:Concept ;
     rdfs:label "Fascism"^^xsd:string ;
     dcterms:identifier "heritageConcept_fascism"^^xsd:string .
@@ -112,6 +165,12 @@
     mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_industrialisation>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_personality_cult>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_state_socialism> .
+
+mdo:holdsValue a owl:ObjectProperty .
+
+mdo:isContextualizedBy a owl:ObjectProperty .
+
+mdo:justifiedWithValue a owl:ObjectProperty .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_colbert_1> a tip:TimeIndexedParticipation ;
     rdfs:label "Participation in the protest about Colbert's statue"^^xsd:string ;
@@ -466,6 +525,12 @@
     dcterms:identifier "production_vieira"^^xsd:string ;
     crm:P17 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_advocacy>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality> .
+
+mdo:reflectsHeritageOf a owl:ObjectProperty .
+
+mdo:resultsIn a owl:ObjectProperty .
+
+dio:supports a owl:ObjectProperty .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actionProposal/actionProposal_replace> a mdo:ActionProposal ;
     rdfs:label "Replace the statue with a new one"^^xsd:string ;
