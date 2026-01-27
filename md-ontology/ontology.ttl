@@ -45,6 +45,8 @@ schema1:performerIn a owl:ObjectProperty .
 
 ceon-actor:participatingActor a owl:ObjectProperty .
 
+ns1:hasMaterialComponent a owl:ObjectProperty .
+
 crm:P108 a owl:ObjectProperty .
 
 crm:P17 a owl:ObjectProperty .
@@ -1136,6 +1138,10 @@ dio:supports a owl:ObjectProperty .
     dcterms:identifier "instant_end_wollstonecraft_2"^^xsd:string ;
     time:inXSDgYearMonth "2020-11"^^xsd:gYearMonth .
 
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_silvered_bronze> a ns1:Material ;
+    rdfs:label "Silvered bronze"^^xsd:string ;
+    dcterms:identifier "material_silvered_bronze"^^xsd:string .
+
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_bristol_centre> a schema1:Place ;
     rdfs:label "Bristol Centre"^^xsd:string ;
     dcterms:identifier "place_bristol_centre"^^xsd:string .
@@ -1711,7 +1717,7 @@ dio:supports a owl:ObjectProperty .
     dcterms:title "Jean Baptiste Colbert Statue"^^xsd:string ;
     schema1:creator <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_jacques-edme_dumont> ;
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_palais_bourbon> ;
-    ns1:Material "bronze"^^xsd:string ;
+    ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_colbert> ;
     crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_colbert> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_jean_baptiste_colbert> ;
@@ -1743,7 +1749,7 @@ dio:supports a owl:ObjectProperty .
     schema1:creator <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_john_cassidy> ;
     schema1:funder <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/governmentOrganization/governmentOrganization_society_merchant_venturers> ;
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_bristol_centre> ;
-    ns1:Material "bronze"^^xsd:string ;
+    ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_colston> ;
     crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_colston> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_edward_colston> ;
@@ -1757,7 +1763,7 @@ dio:supports a owl:ObjectProperty .
     dcterms:title "Mahatma Gandhi Statue"^^xsd:string ;
     schema1:funder <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/governmentOrganization/governmentOrganization_government_india> ;
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_university_ghana> ;
-    ns1:Material "bronze"^^xsd:string ;
+    ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_gandhi> ;
     crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_gandhi> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_mahatma_gandhi> ;
@@ -1789,7 +1795,7 @@ dio:supports a owl:ObjectProperty .
     schema1:creator <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_vito_tongiani> ;
     schema1:funder <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/governmentOrganization/governmentOrganization_municipality_milan> ;
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_montanelli_gardens> ;
-    ns1:Material "bronze"^^xsd:string ;
+    ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_montanelli> ;
     crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_montanelli> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_indro_montanelli> ;
@@ -1805,7 +1811,7 @@ dio:supports a owl:ObjectProperty .
     dcterms:identifier "monument_savile"^^xsd:string ;
     dcterms:title "Jimmy Savile Statue in Glencoe"^^xsd:string ;
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_glencoe_village> ;
-    ns1:Material "bronze"^^xsd:string ;
+    ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_savile> ;
     crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_savile> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_jimmy_savile> ;
@@ -1821,7 +1827,7 @@ dio:supports a owl:ObjectProperty .
     schema1:creator <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_sandor_miklos> ;
     schema1:funder <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/governmentOrganization/governmentOrganization_hungarian_workers_party> ;
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_varosliget> ;
-    ns1:Material "bronze"^^xsd:string ;
+    ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_stalin> ;
     crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_stalin> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_iosif_stalin> ;
@@ -1839,7 +1845,7 @@ dio:supports a owl:ObjectProperty .
     schema1:funder <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/governmentOrganization/governmentOrganization_lisbon_city_council>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/governmentOrganization/governmentOrganization_lisbon_holy_house_mercy> ;
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_trindade_coelho_square> ;
-    ns1:Material "bronze"^^xsd:string ;
+    ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_vieira> ;
     crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_vieira> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_antónio_vieira> ;
@@ -1857,7 +1863,7 @@ dio:supports a owl:ObjectProperty .
     schema1:funder <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/governmentOrganization/governmentOrganization_bee_rowlatt>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/governmentOrganization/governmentOrganization_jeremy_corbyn_mp> ;
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_newington_green> ;
-    ns1:Material "silvered bronze"^^xsd:string ;
+    ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_silvered_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_wollstonecraft> ;
     crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_wollstonecraft> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_mary_wollstonecraft> ;
@@ -2624,6 +2630,10 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_writing> a mdo:Legacy ;
     rdfs:label "Writing"^^xsd:string ;
     dcterms:identifier "legacy_writing"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> a ns1:Material ;
+    rdfs:label "Bronze"^^xsd:string ;
+    dcterms:identifier "material_bronze"^^xsd:string .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_gender_equality> a mdo:Value ;
     rdfs:label "Gender equality"^^xsd:string ;
