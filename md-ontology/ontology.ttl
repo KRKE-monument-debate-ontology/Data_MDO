@@ -395,46 +395,6 @@ mdo:justifiedWithValue a owl:ObjectProperty .
     tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_5> ;
     dcterms:identifier "participation_wollstonecraft_2"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colbert> a crm:E26 ;
-    rdfs:label "Colbert is represented seated, dressed in formal seventeenth-century attire, holding a document"^^xsd:string ;
-    dcterms:identifier "physicalFeature_colbert"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colombo> a crm:E26 ;
-    rdfs:label "Columbus standing atop a pedestal, extending a finger to point toward something ahead"^^xsd:string ;
-    dcterms:identifier "physicalFeature_colombo"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colston> a crm:E26 ;
-    rdfs:label "Edward Colston is depicted standing upright, dressed in formal seventeenth-century attire"^^xsd:string ;
-    dcterms:identifier "physicalFeature_colston"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_gandhi> a crm:E26 ;
-    rdfs:label "Gandhi depicted in a traditional dhoti, holding a walking stick in one arm"^^xsd:string ;
-    dcterms:identifier "physicalFeature_gandhi"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_hagenbeck> a crm:E26 ;
-    rdfs:label "Hagenbeck is represented standing while he pets a lion next to him"^^xsd:string ;
-    dcterms:identifier "physicalFeature_hagenbeck"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_montanelli> a crm:E26 ;
-    rdfs:label "Indro Montanelli seated while typing on his Olivetti"^^xsd:string ;
-    dcterms:identifier "physicalFeature_montanelli"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_savile> a crm:E26 ;
-    rdfs:label "Life-size bronze statue portraying Jimmy Savile in casual clothing, standing in a relaxed pose."^^xsd:string ;
-    dcterms:identifier "physicalFeature_savile"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_stalin> a crm:E26 ;
-    rdfs:label "Joseph Stalin is depicted in military attire, he dominates the surrounding public space."^^xsd:string ;
-    dcterms:identifier "physicalFeature_stalin"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_vieira> a crm:E26 ;
-    rdfs:label "Vieira is depicted standing, holding a cross aloft, surrounded by Indigenous children at his feet."^^xsd:string ;
-    dcterms:identifier "physicalFeature_vieira"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_wollstonecraft> a crm:E26 ;
-    rdfs:label "The sculpture depicts abstract female forms merging into an organic mass that culminates in a small nude figurine"^^xsd:string ;
-    dcterms:identifier "physicalFeature_wollstonecraft"^^xsd:string .
-
 mdo:reflectsHeritageOf a owl:ObjectProperty .
 
 mdo:resultsIn a owl:ObjectProperty .
@@ -1142,6 +1102,46 @@ dio:supports a owl:ObjectProperty .
     rdfs:label "Silvered bronze"^^xsd:string ;
     dcterms:identifier "material_silvered_bronze"^^xsd:string .
 
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colbert> a crm:E26 ;
+    rdfs:label "Colbert is represented seated, dressed in formal seventeenth-century attire, holding a document"^^xsd:string ;
+    dcterms:identifier "physicalFeature_colbert"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colombo> a crm:E26 ;
+    rdfs:label "Columbus standing atop a pedestal, extending a finger to point toward something ahead"^^xsd:string ;
+    dcterms:identifier "physicalFeature_colombo"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colston> a crm:E26 ;
+    rdfs:label "Edward Colston is depicted standing upright, dressed in formal seventeenth-century attire"^^xsd:string ;
+    dcterms:identifier "physicalFeature_colston"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_gandhi> a crm:E26 ;
+    rdfs:label "Gandhi depicted in a traditional dhoti, holding a walking stick in one arm"^^xsd:string ;
+    dcterms:identifier "physicalFeature_gandhi"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_hagenbeck> a crm:E26 ;
+    rdfs:label "Hagenbeck is represented standing while he pets a lion next to him"^^xsd:string ;
+    dcterms:identifier "physicalFeature_hagenbeck"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_montanelli> a crm:E26 ;
+    rdfs:label "Indro Montanelli seated while typing on his Olivetti"^^xsd:string ;
+    dcterms:identifier "physicalFeature_montanelli"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_savile> a crm:E26 ;
+    rdfs:label "Life-size bronze statue portraying Jimmy Savile in casual clothing, standing in a relaxed pose."^^xsd:string ;
+    dcterms:identifier "physicalFeature_savile"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_stalin> a crm:E26 ;
+    rdfs:label "Joseph Stalin is depicted in military attire, he dominates the surrounding public space."^^xsd:string ;
+    dcterms:identifier "physicalFeature_stalin"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_vieira> a crm:E26 ;
+    rdfs:label "Vieira is depicted standing, holding a cross aloft, surrounded by Indigenous children at his feet."^^xsd:string ;
+    dcterms:identifier "physicalFeature_vieira"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_wollstonecraft> a crm:E26 ;
+    rdfs:label "The sculpture depicts abstract female forms merging into an organic mass that culminates in a small nude figurine"^^xsd:string ;
+    dcterms:identifier "physicalFeature_wollstonecraft"^^xsd:string .
+
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_bristol_centre> a schema1:Place ;
     rdfs:label "Bristol Centre"^^xsd:string ;
     dcterms:identifier "place_bristol_centre"^^xsd:string .
@@ -1719,7 +1719,7 @@ dio:supports a owl:ObjectProperty .
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_palais_bourbon> ;
     ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_colbert> ;
-    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_colbert> ;
+    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colbert> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_jean_baptiste_colbert> ;
     mdo:isContextualizedBy <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/contextualMaterial/contextualMaterial_colbert> ;
     mdo:reflectsHeritageOf <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
@@ -1734,7 +1734,7 @@ dio:supports a owl:ObjectProperty .
     schema1:funder <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/governmentOrganization/governmentOrganization_columbus_500_congress> ;
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_pepperdine_university> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_colombo> ;
-    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_colombo> ;
+    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colombo> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_cristoforo_colombo> ;
     mdo:isContextualizedBy <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/contextualMaterial/contextualMaterial_colombo> ;
     mdo:reflectsHeritageOf <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
@@ -1751,7 +1751,7 @@ dio:supports a owl:ObjectProperty .
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_bristol_centre> ;
     ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_colston> ;
-    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_colston> ;
+    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colston> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_edward_colston> ;
     mdo:isContextualizedBy <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/contextualMaterial/contextualMaterial_colston> ;
     mdo:reflectsHeritageOf <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slave_trading> ;
@@ -1765,7 +1765,7 @@ dio:supports a owl:ObjectProperty .
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_university_ghana> ;
     ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_gandhi> ;
-    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_gandhi> ;
+    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_gandhi> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_mahatma_gandhi> ;
     mdo:reflectsHeritageOf <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_caste_system>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
@@ -1779,7 +1779,7 @@ dio:supports a owl:ObjectProperty .
     schema1:creator <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_rudolf_marcuse> ;
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_tierpark_hagenbeck> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_hagenbeck> ;
-    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_hagenbeck> ;
+    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_hagenbeck> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_carl_hagenbeck> ;
     mdo:reflectsHeritageOf <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism>,
@@ -1797,7 +1797,7 @@ dio:supports a owl:ObjectProperty .
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_montanelli_gardens> ;
     ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_montanelli> ;
-    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_montanelli> ;
+    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_montanelli> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_indro_montanelli> ;
     mdo:isContextualizedBy <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/contextualMaterial/contextualMaterial_montanelli> ;
     mdo:reflectsHeritageOf <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
@@ -1813,7 +1813,7 @@ dio:supports a owl:ObjectProperty .
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_glencoe_village> ;
     ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_savile> ;
-    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_savile> ;
+    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_savile> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_jimmy_savile> ;
     mdo:reflectsHeritageOf <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_media_culture>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_pedophilia>,
@@ -1829,7 +1829,7 @@ dio:supports a owl:ObjectProperty .
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_varosliget> ;
     ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_stalin> ;
-    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_stalin> ;
+    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_stalin> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_iosif_stalin> ;
     mdo:reflectsHeritageOf <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_authoritarianism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_communist_regime>,
@@ -1847,7 +1847,7 @@ dio:supports a owl:ObjectProperty .
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_trindade_coelho_square> ;
     ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_vieira> ;
-    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_vieira> ;
+    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_vieira> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_antónio_vieira> ;
     mdo:isContextualizedBy <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/contextualMaterial/contextualMaterial_vieira> ;
     mdo:reflectsHeritageOf <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonial_paternalism>,
@@ -1865,7 +1865,7 @@ dio:supports a owl:ObjectProperty .
     schema1:location <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/place/place_newington_green> ;
     ns1:hasMaterialComponent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/material/material_silvered_bronze> ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_wollstonecraft> ;
-    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physical/physical_feature_wollstonecraft> ;
+    crm:P56 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_wollstonecraft> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_mary_wollstonecraft> ;
     mdo:isContextualizedBy <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/contextualMaterial/contextualMaterial_wollstonecraft> ;
     mdo:reflectsHeritageOf <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sexism>,
