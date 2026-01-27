@@ -64,12 +64,13 @@ classes = {
     "role": pr.Role,
     "relocation": mdo.Relocation,
     "replacement": mdo.Replacement,
-    "actionUndefined": mdo.ActionUndefined
+    "actionUndefined": mdo.ActionUndefined,
+    "material": ceonMaterial.Material
 }
 
 
 # object properties
-op = ["crm:P62", "schema:location", "schema:creator", "schema:funder", "dcterms:subject", "crm:P17", "crm:P108", "mdo:hasLegacyImpact", "schema:performerIn", "time:hasBeginning", "time:hasEnd", "tip:includesEvent", "tip:forEntity", "tip:atTime", "mdo:justifiedWithValue", "ceon-actor:participatingActor", "ceon-actor:participatingActor", "mdo:holdsValue", "schema:knowsAbout", "dio:supports", "mdo:hasStance", "mdo:emergesFrom", "mdo:generates", "mdo:resultsIn", "mdo:reflectsHeritageOf", "crm:P56", "tip:hasRole", "tip:isSettingFor", "mdo:isContextualizedBy"]
+op = ["crm:P62", "schema:location", "schema:creator", "schema:funder", "dcterms:subject", "crm:P17", "crm:P108", "mdo:hasLegacyImpact", "schema:performerIn", "time:hasBeginning", "time:hasEnd", "tip:includesEvent", "tip:forEntity", "tip:atTime", "mdo:justifiedWithValue", "ceon-actor:participatingActor", "ceon-actor:participatingActor", "mdo:holdsValue", "schema:knowsAbout", "dio:supports", "mdo:hasStance", "mdo:emergesFrom", "mdo:generates", "mdo:resultsIn", "mdo:reflectsHeritageOf", "crm:P56", "tip:hasRole", "tip:isSettingFor", "mdo:isContextualizedBy", "mdo:triggeredControversy", "crm:P2", "crm:P56"]
 
 # initialize graph
 g = rdflib.Graph()
