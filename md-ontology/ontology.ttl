@@ -65,14 +65,6 @@ mdo:ActionProposal crm:P2 mdo:Contextualization,
         mdo:Removal,
         mdo:Replacement .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_2> a mdo:ControversialFact ;
-    rdfs:label "During the 12 years Colston was involved with RAC, about 84,500 Africans enslaved people were illegally transported, including many children. Many were branded on the chest and around 20,000 died before the arrival."^^xsd:string ;
-    dcterms:identifier "controversialFact_colston_2"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_3> a mdo:ControversialFact ;
-    rdfs:label "Even after leaving the Royal African Company, Colston continued to defend the slave trade; he was elected to Parliament and used his political position to block any attempts to abolish it."^^xsd:string ;
-    dcterms:identifier "controversialFact_colston_3"^^xsd:string .
-
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversy/controversy_colbert> a mdo:Controversy ;
     rdfs:label "The controversy triggered by Jean Baptiste Colbert in Palais Bourbon (Paris' National Assembly)"^^xsd:string ;
     dcterms:identifier "controversy_colbert"^^xsd:string ;
@@ -146,11 +138,6 @@ mdo:ActionProposal crm:P2 mdo:Contextualization,
     dcterms:identifier "controversy_wollstonecraft"^^xsd:string ;
     ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_wollstonecraft_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_wollstonecraft_2> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_wollstonecraft_1> a deo:Discussion ;
-    rdfs:label "The discussion that arises from different stakeholders' perspectives on Wollstonecraftstatue controversy"^^xsd:string ;
-    dcterms:identifier "discussion_wollstonecraft_1"^^xsd:string ;
-    mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/replacement/replacement_action> .
 
 mdo:emergesFrom a owl:ObjectProperty .
 
@@ -630,7 +617,6 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/concept/concept_nonviolent_resistance>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_2>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_civil_rights>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_mahatma_gandhi>,
@@ -649,7 +635,6 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/concept/concept_nonviolent_resistance>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_2>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_civil_rights>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_mahatma_gandhi>,
@@ -663,7 +648,7 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_savile_1> a mdo:Argument ;
     rdfs:label "The statue should be preserved as a historical record of Savile’s public media career and the social mechanisms that enabled celebrity admiration, allowing future audiences to critically examine how cultural authority was constructed and later dismantled."^^xsd:string ;
     dcterms:identifier "argument_savile_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_sevile_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_savile_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_media_culture>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_pedophilia>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sex_based_violence>,
@@ -679,7 +664,7 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_savile_2> a mdo:Argument ;
     rdfs:label "The statue should be removed as it doesn't provide proper historical context and its continued presence risks legitimizing or normalizing abuse by celebrating celebrity status without acknowledging the harm associated with it."^^xsd:string ;
     dcterms:identifier "argument_savile_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_sevile_1>,
+    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_savile_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_media_culture>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_pedophilia>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sex_based_violence>,
@@ -712,8 +697,9 @@ dio:supports a owl:ObjectProperty .
     rdfs:label "The statue of Iosif Stalin should be removed as it commemorates a political leader responsible for mass repression, state violence, and human rights abuses, making its presence incompatible with democratic values."^^xsd:string ;
     dcterms:identifier "argument_stalin_2"^^xsd:string ;
     dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_authoritarianism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_communist_regime>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism,heritage_authoritarianism>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_political_propaganda>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_iosif_stalin>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_industrialisation>,
@@ -774,6 +760,14 @@ dio:supports a owl:ObjectProperty .
     rdfs:label "Engraved inscription on the pedestal reading \"Mary Wollstonecraft\" and her quote, ‘I do not wish women to have power over men but over themselves’."^^xsd:string ;
     dcterms:identifier "contextualMaterial_wollstonecraft"^^xsd:string .
 
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_2> a mdo:ControversialFact ;
+    rdfs:label "During the 12 years Colston was involved with RAC, about 84,500 Africans enslaved people were illegally transported, including many children. Many were branded on the chest and around 20,000 died before the arrival."^^xsd:string ;
+    dcterms:identifier "controversialFact_colston_2"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_3> a mdo:ControversialFact ;
+    rdfs:label "Even after leaving the Royal African Company, Colston continued to defend the slave trade; he was elected to Parliament and used his political position to block any attempts to abolish it."^^xsd:string ;
+    dcterms:identifier "controversialFact_colston_3"^^xsd:string .
+
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_11> a mdo:DebateSetting ;
     rdfs:label "Public space along the A82, Glencoe Village"^^xsd:string ;
     dcterms:identifier "debateSetting_11"^^xsd:string .
@@ -813,6 +807,18 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/governmentOrganization/governmentOrganization_society_merchant_venturers> a schema1:GovernmentOrganization ;
     rdfs:label "Society of Merchant Venturers"^^xsd:string ;
     dcterms:identifier "governmentOrganization_society_merchant_venturers"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_caste_system> a skos:Concept ;
+    rdfs:label "Caste system"^^xsd:string ;
+    dcterms:identifier "heritageConcept_caste_system"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_mary_wollstonecraft> a mdo:HistoricalFigure ;
+    rdfs:label "Mary Wollstonecraft (1759-1797)"^^xsd:string ;
+    dcterms:identifier "historicalFigure_mary_wollstonecraft"^^xsd:string ;
+    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1> ;
+    mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philosophy>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_women_rights>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_writing> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_beg_colbert_1> a time:Instant ;
     rdfs:label "Start of the interval"^^xsd:string ;
@@ -1124,24 +1130,24 @@ dio:supports a owl:ObjectProperty .
     dcterms:identifier "instant_end_stalin_2"^^xsd:string ;
     time:inXSDgYearMonth "1956-10"^^xsd:gYearMonth .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieria_1> a time:Instant ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieira_1> a time:Instant ;
     rdfs:label "End of the interval"^^xsd:string ;
-    dcterms:identifier "instant_end_vieria_1"^^xsd:string ;
+    dcterms:identifier "instant_end_vieira_1"^^xsd:string ;
     time:inXSDgYearMonth "2017-10"^^xsd:gYearMonth .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieria_2> a time:Instant ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieira_2> a time:Instant ;
     rdfs:label "End of the interval"^^xsd:string ;
-    dcterms:identifier "instant_end_vieria_2"^^xsd:string ;
+    dcterms:identifier "instant_end_vieira_2"^^xsd:string ;
     time:inXSDgYearMonth "2017-10"^^xsd:gYearMonth .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieria_3> a time:Instant ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieira_3> a time:Instant ;
     rdfs:label "End of the interval"^^xsd:string ;
-    dcterms:identifier "instant_end_vieria_3"^^xsd:string ;
+    dcterms:identifier "instant_end_vieira_3"^^xsd:string ;
     time:inXSDgYearMonth "2020-06"^^xsd:gYearMonth .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieria_4> a time:Instant ;
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieira_4> a time:Instant ;
     rdfs:label "End of the interval"^^xsd:string ;
-    dcterms:identifier "instant_end_vieria_4"^^xsd:string ;
+    dcterms:identifier "instant_end_vieira_4"^^xsd:string ;
     time:inXSDgYearMonth "2020-06"^^xsd:gYearMonth .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_wollstonecraft_1> a time:Instant ;
@@ -1197,12 +1203,12 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_wollstonecraft> a mdo:ProPreservation ;
     rdfs:label "Pro Preservation perspective on Mary Wollstonecraft statue controversy"^^xsd:string ;
     dcterms:identifier "proPreservation_wollstonecraft"^^xsd:string ;
-    mdo:emergesFrom <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_wollstonecraft> .
+    mdo:emergesFrom <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_wollstonecraft_1> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_wollstonecraft> a mdo:ProRemoval ;
     rdfs:label "Pro Removal perspective on Mary Wollstonecraft statue controversy"^^xsd:string ;
     dcterms:identifier "proRemoval_wollstonecraft"^^xsd:string ;
-    mdo:emergesFrom <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_wollstonecraft> .
+    mdo:emergesFrom <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_wollstonecraft_1> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_colbert> a crm:E12 ;
     rdfs:label "The activity of producing the statue of Colbert"^^xsd:string ;
@@ -1438,25 +1444,25 @@ dio:supports a owl:ObjectProperty .
     rdfs:label "The duration of the stakeholder’s involvement in Vieira's protest."^^xsd:string ;
     dcterms:identifier "timeInterval_vieira_1"^^xsd:string ;
     time:hasBeginning <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_beg_vieira_1> ;
-    time:hasEnd <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieria_1> .
+    time:hasEnd <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieira_1> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_vieira_2> a tip:TimeInterval ;
     rdfs:label "The duration of the stakeholder’s involvement in Vieira's protest."^^xsd:string ;
     dcterms:identifier "timeInterval_vieira_2"^^xsd:string ;
     time:hasBeginning <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_beg_vieira_2> ;
-    time:hasEnd <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieria_2> .
+    time:hasEnd <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieira_2> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_vieira_3> a tip:TimeInterval ;
     rdfs:label "The duration of the stakeholder’s involvement in Vieira's protest."^^xsd:string ;
     dcterms:identifier "timeInterval_vieira_3"^^xsd:string ;
     time:hasBeginning <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_beg_vieira_3> ;
-    time:hasEnd <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieria_3> .
+    time:hasEnd <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieira_3> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_vieira_4> a tip:TimeInterval ;
     rdfs:label "The duration of the stakeholder’s involvement in Vieira's protest."^^xsd:string ;
     dcterms:identifier "timeInterval_vieira_4"^^xsd:string ;
     time:hasBeginning <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_beg_vieira_4> ;
-    time:hasEnd <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieria_4> .
+    time:hasEnd <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_vieira_4> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_wollstonecraft_1> a tip:TimeInterval ;
     rdfs:label "The duration of the stakeholder’s involvement in Wollstonecraft's protest."^^xsd:string ;
@@ -1551,8 +1557,8 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_stalin_1> a crm:E7 ;
     rdfs:label "During the Hungarian Revolution of 1956, protesters dismantled and destroyed the Stalin statue in Városliget, Budapest, transforming the monument into a powerful symbol of resistance against Soviet domination."^^xsd:string ;
     dcterms:identifier "activity_stalin_1"^^xsd:string ;
-    ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_stailn_2>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_stalin_1> .
+    ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_stalin_1>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_stalin_2> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_1> a crm:E7 ;
     rdfs:label "The statue was inaugurated in Lisbon in october 2017 and immediately provoked controversy. An anti-racist protest by anti-racist advocacy group called Descolonizando was blocked by a far-right counter-demonstration, making the site a symbol of political polarization."^^xsd:string ;
@@ -1643,14 +1649,6 @@ dio:supports a owl:ObjectProperty .
     mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_2> a mdo:ControversialFact ;
-    rdfs:label "Montanelli took part in the colonial wars in Eritrea and Ethiopia, actively supporting Italy’s expansionist project. During his time there he collaborated with Fascist propaganda, wrote articles defending the colonial enterprise, and participated personally in colonial practices"^^xsd:string ;
-    dcterms:identifier "controversialFact_montanelli_2"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_sevile_1> a mdo:ControversialFact ;
-    rdfs:label "After his death, Jimmy Savile was accused of widespread sexual abuse of minors and adults, with investigations concluding that he had exploited his celebrity status to commit offences over several decades."^^xsd:string ;
-    dcterms:identifier "controversialFact_sevile_1"^^xsd:string .
-
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_1> a mdo:DebateSetting ;
     rdfs:label "Pepperdine University"^^xsd:string ;
     dcterms:identifier "debateSetting_1"^^xsd:string .
@@ -1720,17 +1718,10 @@ dio:supports a owl:ObjectProperty .
     dcterms:identifier "discussion_vieira_1"^^xsd:string ;
     mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actionUndefined/actionUndefined_action> .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_authoritarianism> a skos:Concept ;
-    rdfs:label "Authoritarianism"^^xsd:string ;
-    dcterms:identifier "heritageConcept_authoritarianism"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_wollstonecraft> a mdo:HistoricalFigure ;
-    rdfs:label "Mary Wollstonecraft (1759-1797)"^^xsd:string ;
-    dcterms:identifier "historicalFigure_wollstonecraft"^^xsd:string ;
-    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1> ;
-    mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philosophy>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_women_rights>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_writing> .
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_wollstonecraft_1> a deo:Discussion ;
+    rdfs:label "The discussion that arises from different stakeholders' perspectives on Wollstonecraftstatue controversy"^^xsd:string ;
+    dcterms:identifier "discussion_wollstonecraft_1"^^xsd:string ;
+    mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/replacement/replacement_action> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colbert> a dbo:Monument ;
     dcterms:date "1806"^^xsd:gYear ;
@@ -1788,9 +1779,7 @@ dio:supports a owl:ObjectProperty .
     crm:E26 "physical_feature_gandhi"^^xsd:string ;
     crm:P108 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_gandhi> ;
     crm:P62 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_mahatma_gandhi> ;
-    mdo:reflectsHeritageOf <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/concept/concept_caste_system>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/concept/concept_nonviolent_resistance>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_civil_rights>,
+    mdo:reflectsHeritageOf <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_caste_system>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism> ;
     mdo:triggeredControversy "controversy_gandhi"^^xsd:string .
@@ -1928,8 +1917,7 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
     mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_colston> ;
     mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_educational> ;
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking> ;
     dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_6> a ceon-actor:Stakeholder ;
@@ -1943,17 +1931,6 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
     dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_stalin_2> a ceon-actor:Stakeholder ;
-    rdfs:label "Katalin, history teacher"^^xsd:string ;
-    dcterms:identifier "stakeholder_stalin_2"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_industrialisation>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_personality_cult>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_state_socialism> ;
-    mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_stalin> ;
-    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
-    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_stalin_1> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_3> a ceon-actor:Stakeholder ;
     rdfs:label "Joana, a 25-year-old activist"^^xsd:string ;
@@ -2014,6 +1991,14 @@ dio:supports a owl:ObjectProperty .
     rdfs:label "In his military service, during the fascist invasion of Ethiopia, Montanelli married through madamato and sexually assaulted a 12-year-old eritrean girl"^^xsd:string ;
     dcterms:identifier "controversialFact_montanelli_1"^^xsd:string .
 
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_2> a mdo:ControversialFact ;
+    rdfs:label "Montanelli took part in the colonial wars in Eritrea and Ethiopia, actively supporting Italy’s expansionist project. During his time there he collaborated with Fascist propaganda, wrote articles defending the colonial enterprise, and participated personally in colonial practices"^^xsd:string ;
+    dcterms:identifier "controversialFact_montanelli_2"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_savile_1> a mdo:ControversialFact ;
+    rdfs:label "After his death, Jimmy Savile was accused of widespread sexual abuse of minors and adults, with investigations concluding that he had exploited his celebrity status to commit offences over several decades."^^xsd:string ;
+    dcterms:identifier "controversialFact_savile_1"^^xsd:string .
+
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1> a mdo:ControversialFact ;
     rdfs:label "Stalin was responsible for mass political repression, including forced collectivisation, purges, and the establishment of the Gulag system, which led to widespread imprisonment, deportations, and millions of deaths."^^xsd:string ;
     dcterms:identifier "controversialFact_stalin_1"^^xsd:string .
@@ -2025,6 +2010,10 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1> a mdo:ControversialFact ;
     rdfs:label "The sculpture of Mary Wollstonecraft caused controversy because its abstract design and depiction of a nude “everywoman” were seen by many as an inappropriate and disrespectful way to commemorate her intellectual and feminist legacy."^^xsd:string ;
     dcterms:identifier "controversialFact_wollstonecraft_1"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_authoritarianism> a skos:Concept ;
+    rdfs:label "Authoritarianism"^^xsd:string ;
+    dcterms:identifier "heritageConcept_authoritarianism"^^xsd:string .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonial_paternalism> a skos:Concept ;
     rdfs:label "Colonial Paternalism"^^xsd:string ;
@@ -2097,17 +2086,17 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_edward_colston> a mdo:HistoricalFigure ;
     rdfs:label "Edward Colston (1636-1721)"^^xsd:string ;
     dcterms:identifier "historicalFigure_edward_colston"^^xsd:string ;
-    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/cf/cf_colston_2>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/cf/cf_colston_3>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1> ;
+    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_2>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_3> ;
     mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_indro_montanelli> a mdo:HistoricalFigure ;
     rdfs:label "Indro Montanelli (1909-2001)"^^xsd:string ;
     dcterms:identifier "historicalFigure_indro_montanelli"^^xsd:string ;
-    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/cf/cf_montanelli_2>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1> ;
+    schema1:performerIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_2> ;
     mdo:hasLegacyImpact <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_journalism> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_jean_baptiste_colbert> a mdo:HistoricalFigure ;
@@ -2210,8 +2199,8 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_hagenbeck_2> a ceon-actor:Stakeholder ;
     rdfs:label "Samuel Bako, community organizer of Afro-German heritage"^^xsd:string ;
     dcterms:identifier "stakeholder_hagenbeck_2"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/egacy/egacy_zoo_design>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_animal_welfare> ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_animal_welfare>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_zoo_design> ;
     mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_hagenbeck> ;
     mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
@@ -2321,7 +2310,7 @@ dio:supports a owl:ObjectProperty .
     dcterms:identifier "stakeholder_savile_2"^^xsd:string ;
     schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_fundraising>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthrophc_activities> ;
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
     mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_savile> ;
     mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity> ;
@@ -2338,6 +2327,17 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
     dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_stalin_2> .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_stalin_2> a ceon-actor:Stakeholder ;
+    rdfs:label "Katalin, history teacher"^^xsd:string ;
+    dcterms:identifier "stakeholder_stalin_2"^^xsd:string ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_industrialisation>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_personality_cult>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_state_socialism> ;
+    mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_stalin> ;
+    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
+    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_stalin_1> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_wollstonecraft_1> a ceon-actor:Stakeholder ;
     rdfs:label "Historian Dr Myriam Wilks-Heeg"^^xsd:string ;
@@ -2490,8 +2490,7 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
     mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_colston> ;
     mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_educational> ;
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking> ;
     dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_1> a ceon-actor:Stakeholder ;
@@ -2517,10 +2516,6 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_5> a mdo:DebateSetting ;
     rdfs:label "Social Media"^^xsd:string ;
     dcterms:identifier "debateSetting_5"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism> a skos:Concept ;
-    rdfs:label "Imperialism"^^xsd:string ;
-    dcterms:identifier "heritageConcept_imperialism"^^xsd:string .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_colston> a mdo:ProPreservation ;
     rdfs:label "Pro Preservation perspective on Edward Colston statue controversy"^^xsd:string ;
@@ -2560,6 +2555,10 @@ dio:supports a owl:ObjectProperty .
     rdfs:label "The city centre of Bristol"^^xsd:string ;
     dcterms:identifier "debateSetting_8"^^xsd:string .
 
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism> a skos:Concept ;
+    rdfs:label "Imperialism"^^xsd:string ;
+    dcterms:identifier "heritageConcept_imperialism"^^xsd:string .
+
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_pedophilia> a skos:Concept ;
     rdfs:label "Pedophilia"^^xsd:string ;
     dcterms:identifier "heritageConcept_pedophilia"^^xsd:string .
@@ -2572,6 +2571,10 @@ dio:supports a owl:ObjectProperty .
     rdfs:label "Centralisation"^^xsd:string ;
     dcterms:identifier "legacy_centralisation"^^xsd:string .
 
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_contested_racism> a mdo:Legacy ;
+    rdfs:label "Opposition to racism"^^xsd:string ;
+    dcterms:identifier "legacy_contested_racism"^^xsd:string .
+
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_exploration> a mdo:Legacy ;
     rdfs:label "Exploration"^^xsd:string ;
     dcterms:identifier "legacy_exploration"^^xsd:string .
@@ -2580,6 +2583,10 @@ dio:supports a owl:ObjectProperty .
     rdfs:label "Fundraising"^^xsd:string ;
     dcterms:identifier "legacy_fundraising"^^xsd:string .
 
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_indian_independence> a mdo:Legacy ;
+    rdfs:label "Indian Independence"^^xsd:string ;
+    dcterms:identifier "legacy_indian_independence"^^xsd:string .
+
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_industrialisation> a mdo:Legacy ;
     rdfs:label "Industrialisation"^^xsd:string ;
     dcterms:identifier "legacy_industrialisation"^^xsd:string .
@@ -2587,6 +2594,10 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_mercantilism> a mdo:Legacy ;
     rdfs:label "Mercantilism and economic development"^^xsd:string ;
     dcterms:identifier "legacy_mercantilism"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_nonviolent_resistance> a mdo:Legacy ;
+    rdfs:label "Non violent resistance"^^xsd:string ;
+    dcterms:identifier "legacy_nonviolent_resistance"^^xsd:string .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_patronage> a mdo:Legacy ;
     rdfs:label "Patronage: Protection of culture, science, and education"^^xsd:string ;
@@ -2612,10 +2623,6 @@ dio:supports a owl:ObjectProperty .
     rdfs:label "Writing"^^xsd:string ;
     dcterms:identifier "legacy_writing"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_zoo_design> a mdo:Legacy ;
-    rdfs:label "Zoo design"^^xsd:string ;
-    dcterms:identifier "legacy_zoo_design"^^xsd:string .
-
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_gender_equality> a mdo:Value ;
     rdfs:label "Gender equality"^^xsd:string ;
     dcterms:identifier "value_gender_equality"^^xsd:string ;
@@ -2632,6 +2639,10 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality> a mdo:Legacy ;
     rdfs:label "Religion and Spirituality"^^xsd:string ;
     dcterms:identifier "legacy_religion_spirituality"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_zoo_design> a mdo:Legacy ;
+    rdfs:label "Zoo design"^^xsd:string ;
+    dcterms:identifier "legacy_zoo_design"^^xsd:string .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking> a mdo:Value ;
     rdfs:label "Critical thinking"^^xsd:string ;
@@ -2675,13 +2686,13 @@ dio:supports a owl:ObjectProperty .
     rdfs:label "Racism"^^xsd:string ;
     dcterms:identifier "heritageConcept_racism"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> a mdo:Legacy ;
-    rdfs:label "Local philanthropic activities"^^xsd:string ;
-    dcterms:identifier "legacy_philanthropic_activities"^^xsd:string .
-
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions> a mdo:Legacy ;
     rdfs:label "Charitable actions"^^xsd:string ;
     dcterms:identifier "legacy_charitable_actions"^^xsd:string .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> a mdo:Legacy ;
+    rdfs:label "Local philanthropic activities"^^xsd:string ;
+    dcterms:identifier "legacy_philanthropic_activities"^^xsd:string .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_1> a pr:Role ;
     rdfs:label "SupporterOfRemoval"^^xsd:string ;
