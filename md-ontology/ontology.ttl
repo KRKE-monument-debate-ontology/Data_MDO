@@ -15,6 +15,55 @@
 @prefix tip: <http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+# Ontology Declaration
+mdo: a owl:Ontology ;
+    rdfs:comment """The ontology developed within this project aims to formally represent the phenomenon of statue removal as a specific manifestation of Cancel Culture. It provides a structured conceptual framework to describe, classify, and relate the main entities, actors, and processes involved in controversies surrounding public monuments associated with morally or socially contested historical figures.
+
+The ontology serves both as an analytical tool for studying contested heritage and as a conceptual backbone for organizing case studies, enabling comparison across different contexts and supporting a deeper understanding of how societies confront problematic pasts through the transformation or removal of public symbols.
+
+The Monument Debate Ontology was created by Francesca Gaeta, Anna Pasetto, Matilde Passafaro, Alice Piazzi as final project of the course Knowledge Representation and Knowledge Extraction"""@en ;
+    rdfs:label "Monument Debate Ontology"@en .
+
+#Class and subClass Declarations
+mdo:ActionProposal a owl:Class .
+
+mdo:Contextualization a owl:Class ;
+    rdfs:subClassOf mdo:ActionProposal .
+
+mdo:Keeping a owl:Class ;
+    rdfs:subClassOf mdo:ActionProposal .
+
+mdo:Relocation a owl:Class ;
+    rdfs:subClassOf mdo:ActionProposal .
+
+mdo:Removal a owl:Class ;
+    rdfs:subClassOf mdo:ActionProposal .
+
+mdo:Replacement a owl:Class ;
+    rdfs:subClassOf mdo:ActionProposal .
+
+
+
+mdo:Replacement a owl:Class ;
+    rdfs:subClassOf mdo:ActionProposal .
+
+mdo:Proposal a owl:Class .
+
+mdo:ProRemoval a owl:Class ;
+    rdfs:subClassOf mdo:Proposal .
+
+mdo:ProPreservation a owl:Class ;
+    rdfs:subClassOf mdo:Proposal .
+
+crm:E24_Physical_Human-Made_Thing a owl:Class .
+
+dbo:Monument a owl:Class ;
+    rdfs:subClassOf crm:E24_Physical_Human-Made_Thing .
+
+
+
+
+
 tip:atTime a owl:ObjectProperty .
 
 tip:forEntity a owl:ObjectProperty .
@@ -63,11 +112,7 @@ time:hasEnd a owl:ObjectProperty .
 
 time:inXSDgYearMonth a owl:DatatypeProperty .
 
-mdo:ActionProposal crm:P2 mdo:Contextualization,
-        mdo:Keeping,
-        mdo:Relocation,
-        mdo:Removal,
-        mdo:Replacement .
+
 
 mdo:emergesFrom a owl:ObjectProperty .
 
