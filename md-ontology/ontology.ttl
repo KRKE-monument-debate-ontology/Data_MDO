@@ -47,13 +47,13 @@ mdo:Replacement a owl:Class ;
 mdo:Replacement a owl:Class ;
     rdfs:subClassOf mdo:ActionProposal .
 
-mdo:Proposal a owl:Class .
+mdo:Perspective a owl:Class .
 
 mdo:ProRemoval a owl:Class ;
-    rdfs:subClassOf mdo:Proposal .
+    rdfs:subClassOf mdo:Perspective .
 
 mdo:ProPreservation a owl:Class ;
-    rdfs:subClassOf mdo:Proposal .
+    rdfs:subClassOf mdo:Perspective .
 
 crm:E24_Physical_Human-Made_Thing a owl:Class .
 
