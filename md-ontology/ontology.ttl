@@ -85,7 +85,7 @@ tip:isSettingFor rdf:type owl:ObjectProperty ,
 
 
 ###  http://purl.org/dc/terms/subject
-dcterms:subject rdf:type owl:ObjectProperty ,
+mdo:subject rdf:type owl:ObjectProperty ,
                          owl:AsymmetricProperty ,
                          owl:IrreflexiveProperty ;
                 rdfs:domain mdo:Argument ;
@@ -319,18 +319,6 @@ dio:supports rdf:type owl:ObjectProperty ,
 #################################################################
 #    Data properties
 #################################################################
-
-###  http://purl.org/dc/terms/date
-dcterms:date rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/dc/terms/identifier
-dcterms:identifier rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/dc/terms/title
-dcterms:title rdf:type owl:DatatypeProperty .
-
 
 ###  http://www.w3.org/2006/time#inXSDgYearMonth
 time:inXSDgYearMonth rdf:type owl:DatatypeProperty .
@@ -700,7 +688,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colbert_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colbert_1> rdf:type owl:NamedIndividual ,
                                                                                                              mdo:Argument ;
-                                                                                                    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colbert_1> ,
+                                                                                                    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colbert_1> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery> ,
@@ -718,7 +706,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colbert_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colbert_2> rdf:type owl:NamedIndividual ,
                                                                                                              mdo:Argument ;
-                                                                                                    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colbert_1> ,
+                                                                                                    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colbert_1> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery> ,
@@ -737,7 +725,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colombo_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colombo_1> rdf:type owl:NamedIndividual ,
                                                                                                              mdo:Argument ;
-                                                                                                    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1> ,
+                                                                                                    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_expansion> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism> ,
@@ -753,7 +741,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colombo_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colombo_2> rdf:type owl:NamedIndividual ,
                                                                                                              mdo:Argument ;
-                                                                                                    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1> ,
+                                                                                                    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_expansion> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism> ,
@@ -769,7 +757,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> rdf:type owl:NamedIndividual ,
                                                                                                              mdo:Argument ;
-                                                                                                    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1> ,
+                                                                                                    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slave_trading> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_edward_colston> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions> ,
@@ -784,7 +772,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_2> rdf:type owl:NamedIndividual ,
                                                                                                              mdo:Argument ;
-                                                                                                    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1> ,
+                                                                                                    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slave_trading> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_edward_colston> ,
                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions> ,
@@ -799,7 +787,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_gandhi_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_gandhi_1> rdf:type owl:NamedIndividual ,
                                                                                                             mdo:Argument ;
-                                                                                                   dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1> ,
+                                                                                                   mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_2> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_caste_system> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism> ,
@@ -819,7 +807,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_gandhi_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_gandhi_2> rdf:type owl:NamedIndividual ,
                                                                                                             mdo:Argument ;
-                                                                                                   dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1> ,
+                                                                                                   mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_2> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_caste_system> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism> ,
@@ -838,7 +826,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_hagenbeck_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_hagenbeck_1> rdf:type owl:NamedIndividual ,
                                                                                                                mdo:Argument ;
-                                                                                                      dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_hagenbeck_1> ,
+                                                                                                      mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_hagenbeck_1> ,
                                                                                                                       <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism> ,
                                                                                                                       <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism> ,
                                                                                                                       <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_innovation> ,
@@ -856,7 +844,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_hagenbeck_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_hagenbeck_2> rdf:type owl:NamedIndividual ,
                                                                                                                mdo:Argument ;
-                                                                                                      dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_hagenbeck_1> ,
+                                                                                                      mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_hagenbeck_1> ,
                                                                                                                       <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism> ,
                                                                                                                       <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism> ,
                                                                                                                       <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_innovation> ,
@@ -874,7 +862,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_montanelli_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_montanelli_1> rdf:type owl:NamedIndividual ,
                                                                                                                 mdo:Argument ;
-                                                                                                       dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1> ,
+                                                                                                       mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1> ,
                                                                                                                        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_2> ,
                                                                                                                        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism> ,
                                                                                                                        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_freedom_of_press> ,
@@ -892,7 +880,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_montanelli_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_montanelli_2> rdf:type owl:NamedIndividual ,
                                                                                                                 mdo:Argument ;
-                                                                                                       dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1> ,
+                                                                                                       mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1> ,
                                                                                                                        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_2> ,
                                                                                                                        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism> ,
                                                                                                                        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_freedom_of_press> ,
@@ -909,7 +897,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_savile_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_savile_1> rdf:type owl:NamedIndividual ,
                                                                                                             mdo:Argument ;
-                                                                                                   dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_savile_1> ,
+                                                                                                   mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_savile_1> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_media_culture> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_pedophilia> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sex_based_violence> ,
@@ -928,7 +916,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_savile_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_savile_2> rdf:type owl:NamedIndividual ,
                                                                                                             mdo:Argument ;
-                                                                                                   dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_savile_1> ,
+                                                                                                   mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_savile_1> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_media_culture> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_pedophilia> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sex_based_violence> ,
@@ -947,7 +935,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_stalin_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_stalin_1> rdf:type owl:NamedIndividual ,
                                                                                                             mdo:Argument ;
-                                                                                                   dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1> ,
+                                                                                                   mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_authoritarianism> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_communist_regime> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism> ,
@@ -966,7 +954,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_stalin_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_stalin_2> rdf:type owl:NamedIndividual ,
                                                                                                             mdo:Argument ;
-                                                                                                   dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1> ,
+                                                                                                   mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_authoritarianism> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_communist_regime> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism> ,
@@ -986,7 +974,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_1> rdf:type owl:NamedIndividual ,
                                                                                                             mdo:Argument ;
-                                                                                                   dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_vieira_1> ,
+                                                                                                   mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_vieira_1> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonial_paternalism> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_indigenous_protection> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery> ,
@@ -1004,7 +992,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_2> rdf:type owl:NamedIndividual ,
                                                                                                             mdo:Argument ;
-                                                                                                   dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_vieira_1> ,
+                                                                                                   mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_vieira_1> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonial_paternalism> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_indigenous_protection> ,
                                                                                                                    <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery> ,
@@ -1021,7 +1009,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_wollstonecraft_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_wollstonecraft_1> rdf:type owl:NamedIndividual ,
                                                                                                                     mdo:Argument ;
-                                                                                                           dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1> ,
+                                                                                                           mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1> ,
                                                                                                                            <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sexism> ,
                                                                                                                            <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sexualisation> ,
                                                                                                                            <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_mary_wollstonecraft> ,
@@ -1037,7 +1025,7 @@ mdo:Value rdf:type owl:Class .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_wollstonecraft_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_wollstonecraft_2> rdf:type owl:NamedIndividual ,
                                                                                                                     mdo:Argument ;
-                                                                                                           dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1> ,
+                                                                                                           mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1> ,
                                                                                                                            <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sexism> ,
                                                                                                                            <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sexualisation> ,
                                                                                                                            <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_mary_wollstonecraft> ,
