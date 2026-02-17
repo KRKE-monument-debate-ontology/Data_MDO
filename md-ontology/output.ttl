@@ -29,8 +29,6 @@ dcterms:date a owl:DatatypeProperty .
 
 dcterms:identifier a owl:DatatypeProperty .
 
-dcterms:subject a owl:ObjectProperty .
-
 dcterms:title a owl:DatatypeProperty .
 
 schema1:creator a owl:ObjectProperty .
@@ -467,6 +465,8 @@ mdo:reflectsHeritageOf a owl:ObjectProperty .
 
 mdo:resultsIn a owl:ObjectProperty .
 
+mdo:subject a owl:ObjectProperty .
+
 mdo:triggeredControversy a owl:ObjectProperty .
 
 dio:supports a owl:ObjectProperty .
@@ -502,7 +502,9 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colbert_1> a mdo:Argument ;
     rdfs:label "The statue of Jean-Baptiste Colbert should be removed as it commemorates a figure who institutionalized slavery through the Code Noir, legitimizing the exploitation and brutal treatment of enslaved people in French colonies. Keeping the statue in a prominent public space perpetuates the symbolic presence of systemic racism and colonial violence."^^xsd:string ;
     dcterms:identifier "argument_colbert_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colbert_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colbert_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery>,
@@ -510,14 +512,15 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_centralisation>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_mercantilism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_patronage>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colbert> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colbert> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colbert_2> a mdo:Argument ;
     rdfs:label "The statue of Jean-Baptiste Colbert should be preserved as it is because it is not an isolated monument but part of a group of four statues commissioned in 1806 under Napoleon, depicting major servants of the state. The ensemble was conceived to express historical continuity between the monarchy and the Napoleonic Empire; removing Colbert would disrupt this deliberate political and artistic composition and alter a monument designed as a unified whole."^^xsd:string ;
     dcterms:identifier "argument_colbert_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colbert_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colbert_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery>,
@@ -525,41 +528,41 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_centralisation>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_mercantilism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_patronage>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colbert> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colbert> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colombo_1> a mdo:Argument ;
     rdfs:label "The statue of Cristoforo Colombo should be removed from our campus, as it reinforces racism, prejudice and violence, and it should be replaced with a monument celebrating peace, inclusion or Indigenous heritage."^^xsd:string ;
     dcterms:identifier "argument_colombo_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_expansion>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_cristoforo_colombo>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_exploration>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colombo> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colombo> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colombo_2> a mdo:Argument ;
     rdfs:label "The statue should preserved in its location, because it honors exploration and the struggles of Italian immigrants. Removing it would mean losing the historical memory of Cristoforo Colombo's expedition and of the immigration phenomenon in the XV century."^^xsd:string ;
     dcterms:identifier "argument_colombo_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_expansion>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_cristoforo_colombo>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_exploration>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colombo> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colombo> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_gandhi_1> a mdo:Argument ;
     rdfs:label "The statue must be removed because of Gandhi’s racist statements toward African people and his casteist views."^^xsd:string ;
     dcterms:identifier "argument_gandhi_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_decolonization>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_2>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_caste_system>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
@@ -568,15 +571,14 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_contested_racism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_indian_independence>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_nonviolent_resistance>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_gandhi> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_decolonization>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_gandhi> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_gandhi_2> a mdo:Argument ;
     rdfs:label "The statue should be preserved to commemorate the reputation Gandhi had earned during the later years of his life."^^xsd:string ;
     dcterms:identifier "argument_gandhi_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_diplomacy>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_gandhi_2>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_caste_system>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
@@ -585,14 +587,14 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_contested_racism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_indian_independence>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_nonviolent_resistance>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_gandhi> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_diplomacy>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_gandhi> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_savile_1> a mdo:Argument ;
     rdfs:label "The statue should be preserved as a historical record of Savile’s public media career and the social mechanisms that enabled celebrity admiration, allowing future audiences to critically examine how cultural authority was constructed and later dismantled."^^xsd:string ;
     dcterms:identifier "argument_savile_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_savile_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_savile_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_media_culture>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_pedophilia>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sex_based_violence>,
@@ -601,14 +603,14 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_fundraising>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_popular_entertainment>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_savile> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_savile> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_savile_2> a mdo:Argument ;
     rdfs:label "The statue should be removed as it doesn't provide proper historical context and its continued presence risks legitimizing or normalizing abuse by celebrating celebrity status without acknowledging the harm associated with it."^^xsd:string ;
     dcterms:identifier "argument_savile_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_savile_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_savile_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_media_culture>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_pedophilia>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sex_based_violence>,
@@ -617,14 +619,14 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_fundraising>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_popular_entertainment>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_savile> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_savile> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_stalin_1> a mdo:Argument ;
     rdfs:label "The statue of Colston should be preserved as a historical artifact documenting the role of monumental propaganda in authoritarian regimes and the political history of post-war Eastern Europe."^^xsd:string ;
     dcterms:identifier "argument_stalin_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_authoritarianism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_communist_regime>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism>,
@@ -633,14 +635,15 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_industrialisation>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_personality_cult>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_state_socialism>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_stalin> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_stalin> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_stalin_2> a mdo:Argument ;
     rdfs:label "The statue of Iosif Stalin should be removed as it commemorates a political leader responsible for mass repression, state violence, and human rights abuses, making its presence incompatible with democratic values."^^xsd:string ;
     dcterms:identifier "argument_stalin_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_freedom>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_stalin_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_authoritarianism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_communist_regime>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism>,
@@ -649,36 +652,33 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_industrialisation>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_personality_cult>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_state_socialism>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_stalin> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_freedom>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_stalin> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_wollstonecraft_1> a mdo:Argument ;
     rdfs:label "The statue should be revoved because its nude, abstract design is disrespectful, objectifying, and fails to properly honor Mary Wollstonecraft’s intellectual achievements and identity"^^xsd:string ;
     dcterms:identifier "argument_wollstonecraft_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_gender_equality> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sexism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sexualisation>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_mary_wollstonecraft>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philosophy>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_women_rights>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_writing>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_wollstonecraft> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_gender_equality> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_wollstonecraft> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_wollstonecraft_2> a mdo:Argument ;
     rdfs:label "The statue should be preserved because it powerfully symbolizes the birth and ongoing struggle of feminism, encourages public debate, and celebrates collective female empowerment rather than a single heroic figure"^^xsd:string ;
     dcterms:identifier "argument_wollstonecraft_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_wollstonecraft_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sexism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_sexualisation>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_mary_wollstonecraft>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philosophy>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_women_rights>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_writing>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_wollstonecraft> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_wollstonecraft> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/contextualMaterial/contextualMaterial_colbert> a mdo:ContextualMaterial ;
     rdfs:label "A small plaque on the pedestal of the statue reading: \"Colbert\""^^xsd:string ;
@@ -1631,19 +1631,21 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_2> a mdo:Argument ;
     rdfs:label "The statue of Colston should be preserved in its original form and location because it is a historical monument that reflects the values and commemorative practices of the period in which it was erected. Removing or altering it would impose present-day moral judgments on the past and risk erasing historical complexity."^^xsd:string ;
     dcterms:identifier "argument_colston_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slave_trading>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_edward_colston>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_hagenbeck_1> a mdo:Argument ;
     rdfs:label "Hagenbeck statue clearly commemorates his innovations in zoo design, which is without any doubt a remarkable accomplishment. The statue, which has also a great artistic value, should remain in place and be contextualized by additional informative material or complemented by a memorial dedicated to Hagenbeck's victioms, so as to enable critical reflection on Hagenbeck and our colonial history"^^xsd:string ;
     dcterms:identifier "argument_hagenbeck_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_hagenbeck_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_hagenbeck_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_innovation>,
@@ -1651,14 +1653,14 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_carl_hagenbeck>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_zoo_design>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_hagenbeck> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_hagenbeck> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_hagenbeck_2> a mdo:Argument ;
     rdfs:label "Hagenbeck statue should be removed as it commemorates a figure who exploited other human beings, without acknowledging the victims who were exhibited by Hagenbeck in shows that enforced racist assumptions on white supremacy"^^xsd:string ;
     dcterms:identifier "argument_hagenbeck_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_hagenbeck_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_hagenbeck_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_imperialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_innovation>,
@@ -1666,38 +1668,36 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_carl_hagenbeck>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_zoo_design>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_hagenbeck> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_hagenbeck> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_1> a mdo:Argument ;
     rdfs:label "The statue of Vieira should be removed because, despite his defense of Indigenous peoples, he never condemned the African slave trade and upheld a paternalistic view of colonized peoples."^^xsd:string ;
     dcterms:identifier "argument_vieira_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_vieira_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_vieira_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonial_paternalism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_indigenous_protection>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_antónio_vieira>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_advocacy>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_2> a mdo:Argument ;
     rdfs:label "The Vieira statue should remain as part of Portugal’s historical and cultural heritage. Vieira was a Jesuit priest, diplomat, and advocate for Indigenous peoples, and contributed significantly to literature and diplomacy."^^xsd:string ;
     dcterms:identifier "argument_vieira_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_vieira_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_vieira_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonial_paternalism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_indigenous_protection>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slavery>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_antónio_vieira>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_advocacy>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_1> a mdo:DebateSetting ;
     rdfs:label "Pepperdine University"^^xsd:string ;
@@ -2424,19 +2424,21 @@ dio:supports a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> a mdo:Argument ;
     rdfs:label "The statue of Colston should be removed because it celebrates a man who profited from the enslavement and brutal exploitation of tens of thousands of Africans. For the Black community and descendants of enslaved people in Bristol, it is a symbol of systemic racism.  The Colston statue should be removed from public space because it glorifies a man who profited from slavery. Relocating it to a museum, displayed damaged and unrestored, allows critical reflection on both his legacy and the protest against it, without continuing to honor oppression."^^xsd:string ;
     dcterms:identifier "argument_colston_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colston_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_slave_trading>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_edward_colston>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_montanelli_1> a mdo:Argument ;
     rdfs:label "The statue should be removed because it celebrates Indro Montanelli without providing proper historical context, overlooking his statements on colonialism and his marriage to a twelve-year-old Eritrean girl"^^xsd:string ;
     dcterms:identifier "argument_montanelli_1"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_gender_equality>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_2>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_freedom_of_press>,
@@ -2444,14 +2446,13 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_indro_montanelli>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_journalism>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_montanelli> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_gender_equality>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_montanelli> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_montanelli_2> a mdo:Argument ;
     rdfs:label "The statue should be preserved to remember Indro Montanelli as he was one of the most famous Italian journalists of the twentieth century"^^xsd:string ;
     dcterms:identifier "argument_montanelli_2"^^xsd:string ;
-    dcterms:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1>,
+    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
+    mdo:subject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_1>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_montanelli_2>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_colonialism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_freedom_of_press>,
@@ -2459,8 +2460,7 @@ dio:supports a owl:ObjectProperty .
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/heritageConcept/heritageConcept_racism>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/historicalFigure/historicalFigure_indro_montanelli>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_journalism>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_montanelli> ;
-    mdo:justifiedWithValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> .
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_montanelli> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/controversialFact/controversialFact_colombo_1> a mdo:ControversialFact ;
     rdfs:label "Columbus was responsible for the enslavement of indigenous people in America and enforced a brutal government, because of which he was removed from his position"^^xsd:string ;
