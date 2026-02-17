@@ -264,5 +264,5 @@ g.add((mdo.ActionProposal, crm.P2, mdo.Replacement))
 g.add((mdo.ActionProposal, crm.P2, mdo.Contextualization))
 
 # turtle serialization
-print(g.serialize(destination="md-ontology/ontology.ttl", format="turtle"))
+print(g.serialize(destination="md-ontology/output.ttl", format="turtle"))
 
