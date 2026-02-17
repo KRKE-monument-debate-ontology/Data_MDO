@@ -39,8 +39,13 @@ The Monument Debate Ontology was created by Francesca Gaeta, Anna Pasetto, Matil
 #    Annotation properties
 #################################################################
 
+
 ###  http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/includesObject
-tip:includesObject rdf:type owl:AnnotationProperty .
+tip:includesObject rdf:type owl:ObjectProperty ,
+                          owl:AsymmetricProperty ,
+                          owl:IrreflexiveProperty ;
+                 rdfs:domain tip:TimeIndexedParticipation ;
+                 rdfs:range dbo:Monument .
 
 
 #################################################################
