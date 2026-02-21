@@ -9,7 +9,5 @@
     <uri id="Imports Wizard Entry" name="http://www.cidoc-crm.org/cidoc-crm/7.1.3/" uri="http://www.cidoc-crm.org/cidoc-crm/"/>
     <uri id="Imports Wizard Entry" name="http://www.ontologydesignpatterns.org/cp/owl/timeindexedparticipation.owl" uri="https://raw.githubusercontent.com/odpa/patterns-repository/refs/heads/master/Time_indexed_participation/timeindexedparticipation.owl"/>
     <uri id="Imports Wizard Entry" name="https://w3id.org/MON/affordance.owl" uri="https://raw.githubusercontent.com/odpa/patterns-repository/refs/heads/master/Affordance/affordance.owl"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1770736931823" name="http://www.ontologydesignpatterns.org/ekp/owl/Airline.owl" uri="ontology_imports.rdf"/>
-    </group>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
 </catalog>
