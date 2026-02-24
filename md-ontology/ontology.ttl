@@ -36,14 +36,6 @@ The Monument Debate Ontology was created by Francesca Gaeta, Anna Pasetto, Matil
                                                                                                                    rdfs:label "Monument Debate Ontology" .
 
 #################################################################
-#    Annotation properties
-#################################################################
-
-###  http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/includesObject
-tip:includesObject rdf:type owl:AnnotationProperty .
-
-
-#################################################################
 #    Object Properties
 #################################################################
 
@@ -78,6 +70,14 @@ tip:includesEvent rdf:type owl:ObjectProperty ,
                            owl:IrreflexiveProperty ;
                   rdfs:domain tip:TimeIndexedParticipation ;
                   rdfs:range crm:E7 .
+
+
+###  http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/includesObject
+tip:includesObject rdf:type owl:ObjectProperty ,
+                            owl:AsymmetricProperty ,
+                            owl:IrreflexiveProperty ;
+                   rdfs:domain tip:TimeIndexedParticipation ;
+                   rdfs:range dbo:Monument .
 
 
 ###  http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/isSettingFor
@@ -172,13 +172,14 @@ crm:P17 rdf:type owl:ObjectProperty ,
 crm:P2 rdf:type owl:ObjectProperty ,
                 owl:AsymmetricProperty ,
                 owl:IrreflexiveProperty ;
-       rdfs:domain :ActionProposal ;
+       rdfs:domain mdo:ActionProposal ;
        rdfs:range [ rdf:type owl:Class ;
-                    owl:unionOf ( mdo:Relocation
+                    owl:unionOf ( mdo:Contextualization
+                                  mdo:Demolition
+                                  mdo:Keeping
+                                  mdo:Relocation
+                                  mdo:Removal
                                   mdo:Replacement
-                                  :Contextualization
-                                  :Keeping
-                                  :Removal
                                 )
                   ] .
 
@@ -230,7 +231,7 @@ mdo:generates rdf:type owl:ObjectProperty ,
                        owl:AsymmetricProperty ,
                        owl:IrreflexiveProperty ;
               rdfs:domain mdo:Value ;
-              rdfs:range :Perspective .
+              rdfs:range mdo:Perspective .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/hasLegacyImpact
@@ -289,8 +290,8 @@ mdo:reflectsHeritageOf rdf:type owl:ObjectProperty ,
 mdo:resultsIn rdf:type owl:ObjectProperty ,
                        owl:AsymmetricProperty ,
                        owl:IrreflexiveProperty ;
-              rdfs:domain mdo:Argument ;
-              rdfs:range :ActionProposal .
+              rdfs:domain deo:Discussion ;
+              rdfs:range mdo:ActionProposal .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/subject
@@ -312,8 +313,7 @@ mdo:subject rdf:type owl:ObjectProperty ,
 mdo:triggeredControversy rdf:type owl:ObjectProperty ,
                                   owl:AsymmetricProperty ,
                                   owl:IrreflexiveProperty ;
-                         rdfs:domain dbo:Monument ;
-                         rdfs:range mdo:Controversy .
+                         rdfs:domain dbo:Monument .
 
 
 ###  https://w3id.org/dio#supports
@@ -337,7 +337,7 @@ dcterms:identifier rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/title
-#dcterms:title rdf:type owl:DatatypeProperty .
+dcterms:title rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.w3.org/2006/time#inXSDgYearMonth
@@ -370,7 +370,7 @@ schema1:Place rdf:type owl:Class .
 
 
 ###  http://w3id.org/CEON/ontology/actor/Stakeholder
-ceon-actor:Stakeholder rdfs:subClassOf :PerspConceptualiser .
+ceon-actor:Stakeholder rdfs:subClassOf :persp:Conceptualizer .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E12
@@ -393,17 +393,25 @@ crm:E7 rdf:type owl:Class .
 pr:Role rdf:type owl:Class .
 
 
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionProposal
+mdo:ActionProposal rdf:type owl:Class .
+
+
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionUndefined
 mdo:ActionUndefined rdf:type owl:Class .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Argument
 mdo:Argument rdf:type owl:Class ;
-             rdfs:subClassOf :PerspCut .
+             rdfs:subClassOf :persp:Cut .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ContextualMaterial
 mdo:ContextualMaterial rdf:type owl:Class .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Contextualization
+mdo:Contextualization rdf:type owl:Class .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ControversialFact
@@ -418,27 +426,44 @@ mdo:Controversy rdf:type owl:Class .
 mdo:DebateSetting rdf:type owl:Class .
 
 
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Demolition
+mdo:Demolition rdf:type owl:Class .
+
+
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/HistoricalFigure
 mdo:HistoricalFigure rdf:type owl:Class .
 
 
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Keeping
+mdo:Keeping rdf:type owl:Class .
+
+
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Legacy
 mdo:Legacy rdf:type owl:Class ;
-           rdfs:subClassOf :PerspBackgroundKnowledge .
+           rdfs:subClassOf :persp:BackgroundKnowledge .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Perspective
+mdo:Perspective rdf:type owl:Class ;
+                rdfs:subClassOf :persp:Attitude .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ProPreservation
 mdo:ProPreservation rdf:type owl:Class ;
-                    rdfs:subClassOf :Perspective .
+                    rdfs:subClassOf mdo:Perspective .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ProRemoval
 mdo:ProRemoval rdf:type owl:Class ;
-               rdfs:subClassOf :Perspective .
+               rdfs:subClassOf mdo:Perspective .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Relocation
 mdo:Relocation rdf:type owl:Class .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Removal
+mdo:Removal rdf:type owl:Class .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Replacement
@@ -447,57 +472,36 @@ mdo:Replacement rdf:type owl:Class .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Value
 mdo:Value rdf:type owl:Class ;
-          rdfs:subClassOf :PetspLens .
-
-
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#ActionProposal
-:ActionProposal rdf:type owl:Class .
-
-
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#Contextualization
-:Contextualization rdf:type owl:Class .
+          rdfs:subClassOf :persp:Lens .
 
 
 ###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#E24_Physical_Human-Made_Thing
 :E24_Physical_Human-Made_Thing rdf:type owl:Class ;
-                               rdfs:subClassOf :PerspEventuality .
+                               rdfs:subClassOf :persp:Eventuality .
 
 
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#Keeping
-:Keeping rdf:type owl:Class .
+###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#persp:Attitude
+:persp:Attitude rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#PerspAttitude
-:PerspAttitude rdf:type owl:Class .
+###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#persp:BackgroundKnowledge
+:persp:BackgroundKnowledge rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#PerspBackgroundKnowledge
-:PerspBackgroundKnowledge rdf:type owl:Class .
+###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#persp:Conceptualizer
+:persp:Conceptualizer rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#PerspConceptualiser
-:PerspConceptualiser rdf:type owl:Class .
+###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#persp:Cut
+:persp:Cut rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#PerspCut
-:PerspCut rdf:type owl:Class .
+###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#persp:Eventuality
+:persp:Eventuality rdf:type owl:Class .
 
 
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#PerspEventuality
-:PerspEventuality rdf:type owl:Class .
-
-
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#Perspective
-:Perspective rdf:type owl:Class ;
-             rdfs:subClassOf :PerspAttitude .
-
-
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#PetspLens
-:PetspLens rdf:type owl:Class .
-
-
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#Removal
-:Removal rdf:type owl:Class .
+###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#persp:Lens
+:persp:Lens rdf:type owl:Class .
 
 
 #################################################################
@@ -2717,10 +2721,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                               tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colbert_1> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colbert_1> ;
+                                                                                                              tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colbert> ;
                                                                                                               tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_6> ;
                                                                                                               mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_colbert> ;
                                                                                                               dcterms:identifier "participation_colbert_1" ;
-                                                                                                              tip:includesObject "monument_colbert" ;
                                                                                                               rdfs:label "Participation in the protest about Colbert's statue" .
 
 
@@ -2731,10 +2735,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                               tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colbert_1> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_authority> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colbert_1> ;
+                                                                                                              tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colbert> ;
                                                                                                               tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_6> ;
                                                                                                               mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_colbert> ;
                                                                                                               dcterms:identifier "participation_colbert_2" ;
-                                                                                                              tip:includesObject "monument_colbert" ;
                                                                                                               rdfs:label "Participation in the protest about Colbert's statue" .
 
 
@@ -2745,10 +2749,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                               tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colombo_1> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colombo_1> ;
+                                                                                                              tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colombo> ;
                                                                                                               tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_1> ;
                                                                                                               mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_colombo> ;
                                                                                                               dcterms:identifier "participation_colombo_1" ;
-                                                                                                              tip:includesObject "monument_colombo" ;
                                                                                                               rdfs:label "Participation in the protest at Papperdine University about Colombo's statue" .
 
 
@@ -2759,10 +2763,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                               tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colombo_2> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colombo_1> ;
+                                                                                                              tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colombo> ;
                                                                                                               tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_1> ;
                                                                                                               mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_colombo> ;
                                                                                                               dcterms:identifier "participation_colombo_2" ;
-                                                                                                              tip:includesObject "monument_colombo" ;
                                                                                                               rdfs:label "Participation in the protest at Papperdine University about Colombo's statue" .
 
 
@@ -2773,10 +2777,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                               tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_1> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_1> ;
+                                                                                                              tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
                                                                                                               tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_8> ;
                                                                                                               mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_colston> ;
                                                                                                               dcterms:identifier "participation_colston_1" ;
-                                                                                                              tip:includesObject "monument_colston" ;
                                                                                                               rdfs:label "Participation in the protest about Colston's statue" .
 
 
@@ -2787,10 +2791,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                               tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_1> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_1> ;
+                                                                                                              tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
                                                                                                               tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_8> ;
                                                                                                               mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_colston> ;
                                                                                                               dcterms:identifier "participation_colston_2" ;
-                                                                                                              tip:includesObject "monument_colston" ;
                                                                                                               rdfs:label "Participation in the protest about Colston's statue" .
 
 
@@ -2801,10 +2805,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                               tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_2> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_2> ;
+                                                                                                              tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
                                                                                                               tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_8> ;
                                                                                                               mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_colston> ;
                                                                                                               dcterms:identifier "participation_colston_3" ;
-                                                                                                              tip:includesObject "monument_colston" ;
                                                                                                               rdfs:label "Participation in the protest about Colston's statue" .
 
 
@@ -2815,10 +2819,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                               tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_2> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_authority> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_2> ;
+                                                                                                              tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
                                                                                                               tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_8> ;
                                                                                                               mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_colston> ;
                                                                                                               dcterms:identifier "participation_colston_4" ;
-                                                                                                              tip:includesObject "monument_colston" ;
                                                                                                               rdfs:label "Participation in the protest about Colston's statue" .
 
 
@@ -2829,11 +2833,11 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                               tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_3> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_3> ;
+                                                                                                              tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
                                                                                                               tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_8> ,
                                                                                                                                <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_9> ;
                                                                                                               mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_colston> ;
                                                                                                               dcterms:identifier "participation_colston_5" ;
-                                                                                                              tip:includesObject "monument_colston" ;
                                                                                                               rdfs:label "Participation in the protest about Colston's statue" .
 
 
@@ -2844,11 +2848,11 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                               tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_3> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_authority> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_3> ;
+                                                                                                              tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
                                                                                                               tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_8> ,
                                                                                                                                <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_9> ;
                                                                                                               mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_colston> ;
                                                                                                               dcterms:identifier "participation_colston_6" ;
-                                                                                                              tip:includesObject "monument_colston" ;
                                                                                                               rdfs:label "Participation in the protest about Colston's statue" .
 
 
@@ -2859,10 +2863,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_gandhi_1> ;
                                                                                                              tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                              tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_gandhi_1> ;
+                                                                                                             tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_gandhi> ;
                                                                                                              tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_5> ;
                                                                                                              mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_gandhi> ;
                                                                                                              dcterms:identifier "participation_gandhi_1" ;
-                                                                                                             tip:includesObject "monument_gandhi" ;
                                                                                                              rdfs:label "Participation in the protest about Gandhi's statue" .
 
 
@@ -2873,10 +2877,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_gandhi_2> ;
                                                                                                              tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_authority> ;
                                                                                                              tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_gandhi_1> ;
+                                                                                                             tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_gandhi> ;
                                                                                                              tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_5> ;
                                                                                                              mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_gandhi> ;
                                                                                                              dcterms:identifier "participation_gandhi_2" ;
-                                                                                                             tip:includesObject "monument_gandhi" ;
                                                                                                              rdfs:label "Participation in the protest about Gandhi's statue" .
 
 
@@ -2887,10 +2891,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                 tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_hagenbeck_1> ;
                                                                                                                 tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                                 tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_hagenbeck_1> ;
+                                                                                                                tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_hagenbeck> ;
                                                                                                                 tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_3> ;
                                                                                                                 mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_hagenbeck> ;
                                                                                                                 dcterms:identifier "participation_hagenbeck_1" ;
-                                                                                                                tip:includesObject "monument_hagenbeck" ;
                                                                                                                 rdfs:label "Participation in the petition about Hagenbeck statue" .
 
 
@@ -2901,10 +2905,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                 tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_hagenbeck_2> ;
                                                                                                                 tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                                 tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_hagenbeck_1> ;
+                                                                                                                tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_hagenbeck> ;
                                                                                                                 tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_3> ;
                                                                                                                 mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_hagenbeck> ;
                                                                                                                 dcterms:identifier "participation_hagenbeck_2" ;
-                                                                                                                tip:includesObject "monument_hagenbeck" ;
                                                                                                                 rdfs:label "Participation in the petition about Hagenbeck statue" .
 
 
@@ -2915,10 +2919,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                 tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_hagenbeck_3> ;
                                                                                                                 tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                                 tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_hagenbeck_2> ;
+                                                                                                                tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_hagenbeck> ;
                                                                                                                 tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_4> ;
                                                                                                                 mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_hagenbeck> ;
                                                                                                                 dcterms:identifier "participation_hagenbeck_3" ;
-                                                                                                                tip:includesObject "monument_hagenbeck" ;
                                                                                                                 rdfs:label "Participation in the pacific protests about Hagenbeck statue" .
 
 
@@ -2929,10 +2933,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                 tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_hagenbeck_4> ;
                                                                                                                 tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                                 tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_hagenbeck_2> ;
+                                                                                                                tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_hagenbeck> ;
                                                                                                                 tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_4> ;
                                                                                                                 mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_hagenbeck> ;
                                                                                                                 dcterms:identifier "participation_hagenbeck_4" ;
-                                                                                                                tip:includesObject "monument_hagenbeck" ;
                                                                                                                 rdfs:label "Participation in the pacific protests about Hagenbeck statue" .
 
 
@@ -2943,10 +2947,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                  tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_1> ;
                                                                                                                  tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                                  tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_1> ;
+                                                                                                                 tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_montanelli> ;
                                                                                                                  tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_2> ;
                                                                                                                  mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_montanelli> ;
                                                                                                                  dcterms:identifier "participation_montanelli_1" ;
-                                                                                                                 tip:includesObject "monument_montanelli" ;
                                                                                                                  rdfs:label "Participation in the protest about Montanelli's statue" .
 
 
@@ -2957,10 +2961,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                  tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_2> ;
                                                                                                                  tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                                  tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_1> ;
+                                                                                                                 tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_montanelli> ;
                                                                                                                  tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_2> ;
                                                                                                                  mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_montanelli> ;
                                                                                                                  dcterms:identifier "participation_montanelli_2" ;
-                                                                                                                 tip:includesObject "monument_montanelli" ;
                                                                                                                  rdfs:label "Participation in the protest about Montanelli's statue" .
 
 
@@ -2971,10 +2975,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                  tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_3> ;
                                                                                                                  tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                                  tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_2> ;
+                                                                                                                 tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_montanelli> ;
                                                                                                                  tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_2> ;
                                                                                                                  mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_montanelli> ;
                                                                                                                  dcterms:identifier "participation_montanelli_3" ;
-                                                                                                                 tip:includesObject "monument_montanelli" ;
                                                                                                                  rdfs:label "Participation in the protest about Montanelli's statue" .
 
 
@@ -2985,10 +2989,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                  tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_4> ;
                                                                                                                  tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_authority> ;
                                                                                                                  tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_2> ;
+                                                                                                                 tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_montanelli> ;
                                                                                                                  tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_2> ;
                                                                                                                  mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_montanelli> ;
                                                                                                                  dcterms:identifier "participation_montanelli_4" ;
-                                                                                                                 tip:includesObject "monument_montanelli" ;
                                                                                                                  rdfs:label "Participation in the protest about Montanelli's statue" .
 
 
@@ -2999,10 +3003,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                  tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_5> ;
                                                                                                                  tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                                  tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_3> ;
+                                                                                                                 tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_montanelli> ;
                                                                                                                  tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_2> ;
                                                                                                                  mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_montanelli> ;
                                                                                                                  dcterms:identifier "participation_montanelli_5" ;
-                                                                                                                 tip:includesObject "monument_montanelli" ;
                                                                                                                  rdfs:label "Participation in the protest about Montanelli's statue" .
 
 
@@ -3013,10 +3017,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                  tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_6> ;
                                                                                                                  tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_authority> ;
                                                                                                                  tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_3> ;
+                                                                                                                 tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_montanelli> ;
                                                                                                                  tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_2> ;
                                                                                                                  mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_montanelli> ;
                                                                                                                  dcterms:identifier "participation_montanelli_6" ;
-                                                                                                                 tip:includesObject "monument_montanelli" ;
                                                                                                                  rdfs:label "Participation in the protest about Montanelli's statue" .
 
 
@@ -3027,10 +3031,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                  tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_7> ;
                                                                                                                  tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                                  tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_4> ;
+                                                                                                                 tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_montanelli> ;
                                                                                                                  tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_2> ;
                                                                                                                  mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_montanelli> ;
                                                                                                                  dcterms:identifier "participation_montanelli_7" ;
-                                                                                                                 tip:includesObject "monument_montanelli" ;
                                                                                                                  rdfs:label "Participation in the protest about Montanelli's statue" .
 
 
@@ -3041,10 +3045,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                  tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_8> ;
                                                                                                                  tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                                  tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_4> ;
+                                                                                                                 tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_montanelli> ;
                                                                                                                  tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_2> ;
                                                                                                                  mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_montanelli> ;
                                                                                                                  dcterms:identifier "participation_montanelli_8" ;
-                                                                                                                 tip:includesObject "monument_montanelli" ;
                                                                                                                  rdfs:label "Participation in the protest about Montanelli's statue" .
 
 
@@ -3055,10 +3059,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_savile_1> ;
                                                                                                              tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                              tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_savile_1> ;
+                                                                                                             tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_savile> ;
                                                                                                              tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_11> ;
                                                                                                              mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_savile> ;
                                                                                                              dcterms:identifier "participation_savile_1" ;
-                                                                                                             tip:includesObject "monument_savile" ;
                                                                                                              rdfs:label "Participation in the protest about Jimmy Savile's statue" .
 
 
@@ -3069,10 +3073,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_savile_2> ;
                                                                                                              tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                              tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_savile_1> ;
+                                                                                                             tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_savile> ;
                                                                                                              tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_5> ;
                                                                                                              mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_savile> ;
                                                                                                              dcterms:identifier "participation_savile_2" ;
-                                                                                                             tip:includesObject "monument_savile" ;
                                                                                                              rdfs:label "Participation in the protest about Jimmy Savile's statue" .
 
 
@@ -3083,10 +3087,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_stalin_1> ;
                                                                                                              tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                              tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_stalin_1> ;
+                                                                                                             tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_stalin> ;
                                                                                                              tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_10> ;
                                                                                                              mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_stalin> ;
                                                                                                              dcterms:identifier "participation_stalin_1" ;
-                                                                                                             tip:includesObject "monument_stalin" ;
                                                                                                              rdfs:label "Participation in the protest about Stalin's statue" .
 
 
@@ -3097,10 +3101,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_stalin_2> ;
                                                                                                              tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                              tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_stalin_1> ;
+                                                                                                             tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_stalin> ;
                                                                                                              tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_10> ;
                                                                                                              mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_stalin> ;
                                                                                                              dcterms:identifier "participation_stalin_2" ;
-                                                                                                             tip:includesObject "monument_stalin" ;
                                                                                                              rdfs:label "Participation in the protest about Stalin's statue" .
 
 
@@ -3111,10 +3115,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_1> ;
                                                                                                              tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                              tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_1> ;
+                                                                                                             tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> ;
                                                                                                              tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_7> ;
                                                                                                              mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_vieira> ;
                                                                                                              dcterms:identifier "participation_vieira_1" ;
-                                                                                                             tip:includesObject "monument_vieira" ;
                                                                                                              rdfs:label "Participation in the protest about Vieira's statue" .
 
 
@@ -3125,10 +3129,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_1> ;
                                                                                                              tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                              tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_1> ;
+                                                                                                             tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> ;
                                                                                                              tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_7> ;
                                                                                                              mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_vieira> ;
                                                                                                              dcterms:identifier "participation_vieira_2" ;
-                                                                                                             tip:includesObject "monument_vieira" ;
                                                                                                              rdfs:label "Participation in the protest about Vieira's statue" .
 
 
@@ -3139,10 +3143,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_2> ;
                                                                                                              tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                              tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_2> ;
+                                                                                                             tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> ;
                                                                                                              tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_7> ;
                                                                                                              mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_vieira> ;
                                                                                                              dcterms:identifier "participation_vieira_3" ;
-                                                                                                             tip:includesObject "monument_vieira" ;
                                                                                                              rdfs:label "Participation in the protest about Vieira's statue" .
 
 
@@ -3153,10 +3157,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_2> ;
                                                                                                              tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                              tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_2> ;
+                                                                                                             tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> ;
                                                                                                              tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_7> ;
                                                                                                              mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_vieira> ;
                                                                                                              dcterms:identifier "participation_vieira_4" ;
-                                                                                                             tip:includesObject "monument_vieira" ;
                                                                                                              rdfs:label "Participation in the protest about Vieira's statue" .
 
 
@@ -3167,10 +3171,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                      tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_wollstonecraft_1> ;
                                                                                                                      tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                                      tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_wollstonecraft_1> ;
+                                                                                                                     tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_wollstonecraft> ;
                                                                                                                      tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_5> ;
                                                                                                                      mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proRemoval/proRemoval_wollstonecraft> ;
                                                                                                                      dcterms:identifier "participation_wollstonecraft_1" ;
-                                                                                                                     tip:includesObject "monument_wollstonecraft" ;
                                                                                                                      rdfs:label "Participation in the protest about Wollstonecraft statue" .
 
 
@@ -3181,10 +3185,10 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                      tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_wollstonecraft_2> ;
                                                                                                                      tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_organizer> ;
                                                                                                                      tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_wollstonecraft_1> ;
+                                                                                                                     tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_wollstonecraft> ;
                                                                                                                      tip:isSettingFor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_5> ;
                                                                                                                      mdo:hasStance <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/proPreservation/proPreservation_wollstonecraft> ;
                                                                                                                      dcterms:identifier "participation_wollstonecraft_2" ;
-                                                                                                                     tip:includesObject "monument_wollstonecraft" ;
                                                                                                                      rdfs:label "Participation in the protest about Wollstonecraft statue" .
 
 
