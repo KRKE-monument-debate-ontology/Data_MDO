@@ -96,7 +96,7 @@ def instantiate_classes(id, class_dict, graph, subjects):
     # extract the word before the underscore
     class_info = id.split("_")[0]
     # generate uri from value of the identifier column
-    instance_uri = URIRef(classes[class_info] + "/" + id)
+    instance_uri = URIRef(mdo + class_info + "/" + id)
     # use the instance as subject and the class_info to retrieve the correct class for the object, then add the triple to the graph
     graph.add((instance_uri, RDF.type, class_dict[class_info]))
     # extend subject dictionary
@@ -156,7 +156,7 @@ def generate_triples(class_table, op_list, ns_dict, graph, class_name, subjects)
                         val = str(val).strip()
                         # retrieve class_info
                         class_info = val.split("_")[0]
-                        graph.add((URIRef(subjects[class_name][instance_id]), URIRef(ns_dict[pref] + prop), URIRef(classes[class_info] + "/" + val)))
+                        graph.add((URIRef(subjects[class_name][instance_id]), URIRef(ns_dict[pref] + prop), URIRef(mdo + class_info + "/" + val)))
                 #case 2: one value in each cell
                 else:
                     if pd.notna(value): # don't generate triples for NaN values
@@ -164,7 +164,7 @@ def generate_triples(class_table, op_list, ns_dict, graph, class_name, subjects)
                         value = str(value).strip()
                         # retrieve class_info
                         class_info = value.split("_")[0]
-                        graph.add((URIRef(subjects[class_name][instance_id]), URIRef(ns_dict[pref] + prop), URIRef(classes[class_info] + "/" + value)))
+                        graph.add((URIRef(subjects[class_name][instance_id]), URIRef(ns_dict[pref] + prop), URIRef(mdo + class_info + "/" + value)))
     
     return subjects, graph
 
