@@ -1,4 +1,3 @@
-@prefix : <https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#> .
 @prefix pr: <http://www.ontologydesignpatterns.org/cp/owl/participantRole.owl> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
@@ -17,23 +16,25 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix schema1: <http://schema.org/> .
 @prefix ceon-actor: <http://w3id.org/CEON/ontology/actor/> .
-@base <https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl> .
+@base <http://www.w3.org/2002/07/owl#> .
 
-<https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl> rdf:type owl:Ontology ;
-                                                                                                                   owl:imports dbo: ,
-                                                                                                                               dcterms: ,
-                                                                                                                               <http://purl.org/spar/pso/2015-07-03> ,
-                                                                                                                               schema1: ,
-                                                                                                                               <http://w3id.org/CEON/ontology/actor/0.4/> ,
-                                                                                                                               <http://w3id.org/CEON/ontology/material/0.4/> ,
-                                                                                                                               <http://www.cidoc-crm.org/cidoc-crm/7.1.3/> ,
-                                                                                                                               <http://www.w3.org/2004/02/skos/core> ,
-                                                                                                                               <http://www.w3.org/2006/time#2016> ,
-                                                                                                                               dio: ;
-                                                                                                                   rdfs:comment """The ontology developed within this project aims to formally represent the phenomenon of statue removal as a specific manifestation of Cancel Culture. It provides a structured conceptual framework to describe, classify, and relate the main entities, actors, and processes involved in controversies surrounding public monuments associated with morally or socially contested historical figures.
+[ rdf:type owl:Ontology ;
+   owl:imports dbo: ,
+               dcterms: ,
+               <http://purl.org/spar/pso/2015-07-03> ,
+               <http://w3id.org/CEON/ontology/actor/0.4/> ,
+               <http://w3id.org/CEON/ontology/material/0.4/> ,
+               <http://www.cidoc-crm.org/cidoc-crm/7.1.3/> ,
+               <http://www.w3.org/2004/02/skos/core> ,
+               <http://www.w3.org/2006/time#2016> ,
+               dio: ;
+   rdfs:comment """The ontology developed within this project aims to formally represent the phenomenon of statue removal as a specific manifestation of Cancel Culture. It provides a structured conceptual framework to describe, classify, and relate the main entities, actors, and processes involved in controversies surrounding public monuments associated with morally or socially contested historical figures.
+
 The ontology serves both as an analytical tool for studying contested heritage and as a conceptual backbone for organizing case studies, enabling comparison across different contexts and supporting a deeper understanding of how societies confront problematic pasts through the transformation or removal of public symbols.
+
 The Monument Debate Ontology was created by Francesca Gaeta, Anna Pasetto, Matilde Passafaro, Alice Piazzi as final project of the course Knowledge Representation and Knowledge Extraction""" ;
-                                                                                                                   rdfs:label "Monument Debate Ontology" .
+   rdfs:label "Monument Debate Ontology"
+ ] .
 
 #################################################################
 #    Object Properties
@@ -69,7 +70,7 @@ tip:includesEvent rdf:type owl:ObjectProperty ,
                            owl:AsymmetricProperty ,
                            owl:IrreflexiveProperty ;
                   rdfs:domain tip:TimeIndexedParticipation ;
-                  rdfs:range crm:E7 .
+                  rdfs:range crm:E7_Activity .
 
 
 ###  http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/includesObject
@@ -93,7 +94,7 @@ schema1:creator rdf:type owl:ObjectProperty ,
                          owl:AsymmetricProperty ,
                          owl:IrreflexiveProperty ;
                 rdfs:domain dbo:Monument ;
-                rdfs:range crm:E39 .
+                rdfs:range crm:E39_Actor .
 
 
 ###  http://schema.org/funder
@@ -137,7 +138,7 @@ ceon-actor:participatingActor rdf:type owl:ObjectProperty ,
                                        owl:AsymmetricProperty ,
                                        owl:IrreflexiveProperty ;
                               rdfs:domain [ rdf:type owl:Class ;
-                                            owl:unionOf ( crm:E7
+                                            owl:unionOf ( crm:E7_Activity
                                                           mdo:Controversy
                                                         )
                                           ] ;
@@ -156,15 +157,15 @@ ns1:hasMaterialComponent rdf:type owl:ObjectProperty ,
 crm:P108 rdf:type owl:ObjectProperty ,
                   owl:AsymmetricProperty ,
                   owl:IrreflexiveProperty ;
-         rdfs:domain :E24_Physical_Human-Made_Thing ;
-         rdfs:range crm:E12 .
+         rdfs:domain crm:E24_Physical_Human-Made_Thing ;
+         rdfs:range crm:E12_Production .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/P17
 crm:P17 rdf:type owl:ObjectProperty ,
                  owl:AsymmetricProperty ,
                  owl:IrreflexiveProperty ;
-        rdfs:domain crm:E12 ;
+        rdfs:domain crm:E12_Production ;
         rdfs:range mdo:Legacy .
 
 
@@ -172,16 +173,12 @@ crm:P17 rdf:type owl:ObjectProperty ,
 crm:P2 rdf:type owl:ObjectProperty ,
                 owl:AsymmetricProperty ,
                 owl:IrreflexiveProperty ;
-       rdfs:domain mdo:ActionProposal ;
-       rdfs:range [ rdf:type owl:Class ;
-                    owl:unionOf ( mdo:Contextualization
-                                  mdo:Demolition
-                                  mdo:Keeping
-                                  mdo:Relocation
-                                  mdo:Removal
-                                  mdo:Replacement
-                                )
-                  ] .
+       rdfs:domain [ rdf:type owl:Class ;
+                     owl:unionOf ( mdo:ActionProposal
+                                   mdo:Remedy
+                                 )
+                   ] ;
+       rdfs:range crm:E55_Type .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/P56
@@ -189,14 +186,14 @@ crm:P56 rdf:type owl:ObjectProperty ,
                  owl:AsymmetricProperty ,
                  owl:IrreflexiveProperty ;
         rdfs:domain dbo:Monument ;
-        rdfs:range crm:E26 .
+        rdfs:range crm:E26_Physical_Feature .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/P62
 crm:P62 rdf:type owl:ObjectProperty ,
                  owl:AsymmetricProperty ,
                  owl:IrreflexiveProperty ;
-        rdfs:domain :E24_Physical_Human-Made_Thing ;
+        rdfs:domain crm:E24_Physical_Human-Made_Thing ;
         rdfs:range mdo:HistoricalFigure .
 
 
@@ -222,7 +219,7 @@ time:hasEnd rdf:type owl:ObjectProperty ,
 mdo:emergesFrom rdf:type owl:ObjectProperty ,
                          owl:AsymmetricProperty ,
                          owl:IrreflexiveProperty ;
-                rdfs:domain tip:TimeIndexedParticipation ;
+                rdfs:domain mdo:Perspective ;
                 rdfs:range deo:Discussion .
 
 
@@ -246,7 +243,7 @@ mdo:hasLegacyImpact rdf:type owl:ObjectProperty ,
 mdo:hasStance rdf:type owl:ObjectProperty ,
                        owl:AsymmetricProperty ,
                        owl:IrreflexiveProperty ;
-              rdfs:domain pr:Role ;
+              rdfs:domain tip:TimeIndexedParticipation ;
               rdfs:range [ rdf:type owl:Class ;
                            owl:unionOf ( mdo:ProPreservation
                                          mdo:ProRemoval
@@ -294,6 +291,14 @@ mdo:resultsIn rdf:type owl:ObjectProperty ,
               rdfs:range mdo:ActionProposal .
 
 
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/resultsInto
+mdo:resultsInto rdf:type owl:ObjectProperty ,
+                         owl:AsymmetricProperty ,
+                         owl:IrreflexiveProperty ;
+                rdfs:domain mdo:ActionProposal ;
+                rdfs:range mdo:Remedy .
+
+
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/subject
 mdo:subject rdf:type owl:ObjectProperty ,
                      owl:AsymmetricProperty ,
@@ -313,7 +318,8 @@ mdo:subject rdf:type owl:ObjectProperty ,
 mdo:triggeredControversy rdf:type owl:ObjectProperty ,
                                   owl:AsymmetricProperty ,
                                   owl:IrreflexiveProperty ;
-                         rdfs:domain dbo:Monument .
+                         rdfs:domain dbo:Monument ;
+                         rdfs:range mdo:Controversy .
 
 
 ###  https://w3id.org/dio#supports
@@ -350,7 +356,11 @@ time:inXSDgYearMonth rdf:type owl:DatatypeProperty .
 
 ###  http://dbpedia.org/ontology/Monument
 dbo:Monument rdf:type owl:Class ;
-             rdfs:subClassOf :E24_Physical_Human-Made_Thing .
+             rdfs:subClassOf crm:E24_Physical_Human-Made_Thing .
+
+
+###  http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/Event
+tip:Event rdf:type owl:Class .
 
 
 ###  http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/TimeIndexedParticipation
@@ -370,48 +380,62 @@ schema1:Place rdf:type owl:Class .
 
 
 ###  http://w3id.org/CEON/ontology/actor/Stakeholder
-ceon-actor:Stakeholder rdfs:subClassOf :persp:Conceptualizer .
+ceon-actor:Stakeholder rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Conceptualizer> .
 
 
-###  http://www.cidoc-crm.org/cidoc-crm/E12
-crm:E12 rdf:type owl:Class .
+###  http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing
+crm:E24_Physical_Human-Made_Thing rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Eventuality> .
 
 
-###  http://www.cidoc-crm.org/cidoc-crm/E26
-crm:E26 rdf:type owl:Class .
-
-
-###  http://www.cidoc-crm.org/cidoc-crm/E39
-crm:E39 rdf:type owl:Class .
-
-
-###  http://www.cidoc-crm.org/cidoc-crm/E7
-crm:E7 rdf:type owl:Class .
+###  http://www.cidoc-crm.org/cidoc-crm/E7_Activity
+crm:E7_Activity rdfs:subClassOf tip:Event .
 
 
 ###  http://www.ontologydesignpatterns.org/cp/owl/participantRole.owlRole
 pr:Role rdf:type owl:Class .
 
 
+###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude
+<http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge
+<http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Conceptualizer
+<http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Conceptualizer> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Cut
+<http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Cut> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Eventuality
+<http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Eventuality> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Lens
+<http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Lens> rdf:type owl:Class .
+
+
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionProposal
-mdo:ActionProposal rdf:type owl:Class .
-
-
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionUndefined
-mdo:ActionUndefined rdf:type owl:Class .
+mdo:ActionProposal rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty mdo:resultsInto ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass mdo:Remedy
+                                   ] .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Argument
 mdo:Argument rdf:type owl:Class ;
-             rdfs:subClassOf :persp:Cut .
+             rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Cut> .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ContextualMaterial
 mdo:ContextualMaterial rdf:type owl:Class .
-
-
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Contextualization
-mdo:Contextualization rdf:type owl:Class .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ControversialFact
@@ -426,26 +450,18 @@ mdo:Controversy rdf:type owl:Class .
 mdo:DebateSetting rdf:type owl:Class .
 
 
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Demolition
-mdo:Demolition rdf:type owl:Class .
-
-
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/HistoricalFigure
 mdo:HistoricalFigure rdf:type owl:Class .
 
 
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Keeping
-mdo:Keeping rdf:type owl:Class .
-
-
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Legacy
 mdo:Legacy rdf:type owl:Class ;
-           rdfs:subClassOf :persp:BackgroundKnowledge .
+           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge> .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Perspective
 mdo:Perspective rdf:type owl:Class ;
-                rdfs:subClassOf :persp:Attitude .
+                rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Attitude> .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ProPreservation
@@ -458,95 +474,22 @@ mdo:ProRemoval rdf:type owl:Class ;
                rdfs:subClassOf mdo:Perspective .
 
 
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Relocation
-mdo:Relocation rdf:type owl:Class .
-
-
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Removal
-mdo:Removal rdf:type owl:Class .
-
-
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Replacement
-mdo:Replacement rdf:type owl:Class .
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Remedy
+mdo:Remedy rdf:type owl:Class .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Value
 mdo:Value rdf:type owl:Class ;
-          rdfs:subClassOf :persp:Lens .
-
-
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#E24_Physical_Human-Made_Thing
-:E24_Physical_Human-Made_Thing rdf:type owl:Class ;
-                               rdfs:subClassOf :persp:Eventuality .
-
-
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#persp:Attitude
-:persp:Attitude rdf:type owl:Class .
-
-
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#persp:BackgroundKnowledge
-:persp:BackgroundKnowledge rdf:type owl:Class .
-
-
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#persp:Conceptualizer
-:persp:Conceptualizer rdf:type owl:Class .
-
-
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#persp:Cut
-:persp:Cut rdf:type owl:Class .
-
-
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#persp:Eventuality
-:persp:Eventuality rdf:type owl:Class .
-
-
-###  https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#persp:Lens
-:persp:Lens rdf:type owl:Class .
+          rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Lens> .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionProposal
-mdo:ActionProposal rdf:type owl:NamedIndividual ;
-                   crm:P2 mdo:Contextualization ,
-                          mdo:Keeping ,
-                          mdo:Relocation ,
-                          mdo:Removal ,
-                          mdo:Replacement .
-
-
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Contextualization
-mdo:Contextualization rdf:type owl:NamedIndividual .
-
-
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Keeping
-mdo:Keeping rdf:type owl:NamedIndividual .
-
-
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Relocation
-mdo:Relocation rdf:type owl:NamedIndividual .
-
-
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Removal
-mdo:Removal rdf:type owl:NamedIndividual .
-
-
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Replacement
-mdo:Replacement rdf:type owl:NamedIndividual .
-
-
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actionUndefined/actionUndefined_action
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actionUndefined/actionUndefined_action> rdf:type owl:NamedIndividual ,
-                                                                                                                        mdo:ActionUndefined ;
-                                                                                                               dcterms:identifier "actionUndefined_action" ;
-                                                                                                               rdfs:label "The discussion among the stakeholders did not lead to a remedy action" .
-
-
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colbert_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colbert_1> rdf:type owl:NamedIndividual ,
-                                                                                                             crm:E7 ;
+                                                                                                             crm:E7_Activity ;
                                                                                                     ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colbert_1> ,
                                                                                                                                   <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colbert_2> ;
                                                                                                     dcterms:identifier "activity_colbert_1" ;
@@ -555,7 +498,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colombo_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colombo_1> rdf:type owl:NamedIndividual ,
-                                                                                                             crm:E7 ;
+                                                                                                             crm:E7_Activity ;
                                                                                                     ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colombo_1> ,
                                                                                                                                   <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colombo_2> ;
                                                                                                     dcterms:identifier "activity_colombo_1" ;
@@ -564,7 +507,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_1> rdf:type owl:NamedIndividual ,
-                                                                                                             crm:E7 ;
+                                                                                                             crm:E7_Activity ;
                                                                                                     ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_1> ,
                                                                                                                                   <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_2> ;
                                                                                                     dcterms:identifier "activity_colston_1" ;
@@ -573,7 +516,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_2> rdf:type owl:NamedIndividual ,
-                                                                                                             crm:E7 ;
+                                                                                                             crm:E7_Activity ;
                                                                                                     ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_3> ,
                                                                                                                                   <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_4> ;
                                                                                                     dcterms:identifier "activity_colston_2" ;
@@ -582,7 +525,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_3
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_3> rdf:type owl:NamedIndividual ,
-                                                                                                             crm:E7 ;
+                                                                                                             crm:E7_Activity ;
                                                                                                     ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_5> ,
                                                                                                                                   <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_6> ;
                                                                                                     dcterms:identifier "activity_colston_3" ;
@@ -591,7 +534,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_gandhi_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_gandhi_1> rdf:type owl:NamedIndividual ,
-                                                                                                            crm:E7 ;
+                                                                                                            crm:E7_Activity ;
                                                                                                    ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_gandhi_1> ,
                                                                                                                                  <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_gandhi_2> ;
                                                                                                    dcterms:identifier "activity_gandhi_1" ;
@@ -600,7 +543,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_hagenbeck_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_hagenbeck_1> rdf:type owl:NamedIndividual ,
-                                                                                                               crm:E7 ;
+                                                                                                               crm:E7_Activity ;
                                                                                                       ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_hagenbeck_1> ,
                                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_hagenbeck_2> ;
                                                                                                       dcterms:identifier "activity_hagenbeck_1" ;
@@ -609,7 +552,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_hagenbeck_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_hagenbeck_2> rdf:type owl:NamedIndividual ,
-                                                                                                               crm:E7 ;
+                                                                                                               crm:E7_Activity ;
                                                                                                       ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_hagenbeck_3> ,
                                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_hagenbeck_4> ;
                                                                                                       dcterms:identifier "activity_hagenbeck_2" ;
@@ -618,7 +561,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_1> rdf:type owl:NamedIndividual ,
-                                                                                                                crm:E7 ;
+                                                                                                                crm:E7_Activity ;
                                                                                                        ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_1> ,
                                                                                                                                      <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_2> ;
                                                                                                        dcterms:identifier "activity_montanelli_1" ;
@@ -627,7 +570,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_2> rdf:type owl:NamedIndividual ,
-                                                                                                                crm:E7 ;
+                                                                                                                crm:E7_Activity ;
                                                                                                        ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_3> ,
                                                                                                                                      <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_4> ;
                                                                                                        dcterms:identifier "activity_montanelli_2" ;
@@ -636,7 +579,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_3
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_3> rdf:type owl:NamedIndividual ,
-                                                                                                                crm:E7 ;
+                                                                                                                crm:E7_Activity ;
                                                                                                        ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_5> ,
                                                                                                                                      <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_6> ;
                                                                                                        dcterms:identifier "activity_montanelli_3" ;
@@ -645,7 +588,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_4
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_montanelli_4> rdf:type owl:NamedIndividual ,
-                                                                                                                crm:E7 ;
+                                                                                                                crm:E7_Activity ;
                                                                                                        ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_7> ,
                                                                                                                                      <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_montanelli_8> ;
                                                                                                        dcterms:identifier "activity_montanelli_4" ;
@@ -654,7 +597,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_savile_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_savile_1> rdf:type owl:NamedIndividual ,
-                                                                                                            crm:E7 ;
+                                                                                                            crm:E7_Activity ;
                                                                                                    ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_savile_1> ,
                                                                                                                                  <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_savile_2> ;
                                                                                                    dcterms:identifier "activity_savile_1" ;
@@ -663,7 +606,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_stalin_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_stalin_1> rdf:type owl:NamedIndividual ,
-                                                                                                            crm:E7 ;
+                                                                                                            crm:E7_Activity ;
                                                                                                    ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_stalin_1> ,
                                                                                                                                  <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_stalin_2> ;
                                                                                                    dcterms:identifier "activity_stalin_1" ;
@@ -672,7 +615,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_1> rdf:type owl:NamedIndividual ,
-                                                                                                            crm:E7 ;
+                                                                                                            crm:E7_Activity ;
                                                                                                    ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_1> ,
                                                                                                                                  <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_2> ;
                                                                                                    dcterms:identifier "activity_vieira_1" ;
@@ -681,7 +624,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_2
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_2> rdf:type owl:NamedIndividual ,
-                                                                                                            crm:E7 ;
+                                                                                                            crm:E7_Activity ;
                                                                                                    ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_3> ,
                                                                                                                                  <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_4> ;
                                                                                                    dcterms:identifier "activity_vieira_2" ;
@@ -690,7 +633,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_wollstonecraft_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_wollstonecraft_1> rdf:type owl:NamedIndividual ,
-                                                                                                                    crm:E7 ;
+                                                                                                                    crm:E7_Activity ;
                                                                                                            ceon-actor:participatingActor <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_wollstonecraft_1> ,
                                                                                                                                          <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_wollstonecraft_2> ;
                                                                                                            dcterms:identifier "activity_wollstonecraft_1" ;
@@ -699,49 +642,49 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_jacques-edme_dumont
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_jacques-edme_dumont> rdf:type owl:NamedIndividual ,
-                                                                                                                 crm:E39 ;
+                                                                                                                 crm:E39_Actor ;
                                                                                                         dcterms:identifier "actor_jacques-edme_dumont" ;
                                                                                                         rdfs:label "Jacques-Edme Dumont" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_john_cassidy
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_john_cassidy> rdf:type owl:NamedIndividual ,
-                                                                                                          crm:E39 ;
+                                                                                                          crm:E39_Actor ;
                                                                                                  dcterms:identifier "actor_john_cassidy" ;
                                                                                                  rdfs:label "John Cassidy" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_maggi_hambling
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_maggi_hambling> rdf:type owl:NamedIndividual ,
-                                                                                                            crm:E39 ;
+                                                                                                            crm:E39_Actor ;
                                                                                                    dcterms:identifier "actor_maggi_hambling" ;
                                                                                                    rdfs:label "Maggi Hambling" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_marco_telmo_areias_fidalgo
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_marco_telmo_areias_fidalgo> rdf:type owl:NamedIndividual ,
-                                                                                                                        crm:E39 ;
+                                                                                                                        crm:E39_Actor ;
                                                                                                                dcterms:identifier "actor_marco_telmo_areias_fidalgo" ;
                                                                                                                rdfs:label "Marco Telmo Areias Fidalgo" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_rudolf_marcuse
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_rudolf_marcuse> rdf:type owl:NamedIndividual ,
-                                                                                                            crm:E39 ;
+                                                                                                            crm:E39_Actor ;
                                                                                                    dcterms:identifier "actor_rudolf_marcuse" ;
                                                                                                    rdfs:label "Rudolf Marcuse (1878-1940)" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_sandor_miklos
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_sandor_miklos> rdf:type owl:NamedIndividual ,
-                                                                                                           crm:E39 ;
+                                                                                                           crm:E39_Actor ;
                                                                                                   dcterms:identifier "actor_sandor_miklos" ;
                                                                                                   rdfs:label "Sandor Miklos" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_vito_tongiani
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actor/actor_vito_tongiani> rdf:type owl:NamedIndividual ,
-                                                                                                           crm:E39 ;
+                                                                                                           crm:E39_Actor ;
                                                                                                   dcterms:identifier "actor_vito_tongiani" ;
                                                                                                   rdfs:label "Vito Tongiani" .
 
@@ -1423,7 +1366,9 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_colbert_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_colbert_1> rdf:type owl:NamedIndividual ,
                                                                                                                  deo:Discussion ;
-                                                                                                        mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actionUndefined/actionUndefined_action> ;
+                                                                                                        mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_contextualization> ,
+                                                                                                                      <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_keeping> ,
+                                                                                                                      <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_removal> ;
                                                                                                         dcterms:identifier "discussion_colbert_1" ;
                                                                                                         rdfs:label "The discussion that arises from different stakeholders' perspectives on Colbert statue controversy" .
 
@@ -1431,7 +1376,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_colombo_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_colombo_1> rdf:type owl:NamedIndividual ,
                                                                                                                  deo:Discussion ;
-                                                                                                        mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/relocation/relocation_action> ;
+                                                                                                        mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_relocation> ;
                                                                                                         dcterms:identifier "discussion_colombo_1" ;
                                                                                                         rdfs:label "The discussion that arises from different stakeholders' perspectives on Colombo statue controversy" .
 
@@ -1439,7 +1384,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_colston_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_colston_1> rdf:type owl:NamedIndividual ,
                                                                                                                  deo:Discussion ;
-                                                                                                        mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/relocation/relocation_action> ;
+                                                                                                        mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_relocation> ;
                                                                                                         dcterms:identifier "discussion_colston_1" ;
                                                                                                         rdfs:label "The discussion that arises from different stakeholders' perspectives on Colston statue controversy" .
 
@@ -1447,7 +1392,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_gandhi_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_gandhi_1> rdf:type owl:NamedIndividual ,
                                                                                                                 deo:Discussion ;
-                                                                                                       mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/relocation/relocation_action> ;
+                                                                                                       mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_relocation> ;
                                                                                                        dcterms:identifier "discussion_gandhi_1" ;
                                                                                                        rdfs:label "The discussion that arises from different stakeholders' perspectives on Gandhi statue controversy" .
 
@@ -1455,7 +1400,9 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_hagenbeck_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_hagenbeck_1> rdf:type owl:NamedIndividual ,
                                                                                                                    deo:Discussion ;
-                                                                                                          mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actionUndefined/actionUndefined_action> ;
+                                                                                                          mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_contextualization> ,
+                                                                                                                        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_keeping> ,
+                                                                                                                        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_removal> ;
                                                                                                           dcterms:identifier "discussion_hagenbeck_1" ;
                                                                                                           rdfs:label "The discussion that arises from different stakeholders' perspectives on Hagenbeck statue controversy" .
 
@@ -1463,7 +1410,9 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_montanelli_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_montanelli_1> rdf:type owl:NamedIndividual ,
                                                                                                                     deo:Discussion ;
-                                                                                                           mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actionUndefined/actionUndefined_action> ;
+                                                                                                           mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_contextualization> ,
+                                                                                                                         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_keeping> ,
+                                                                                                                         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_removal> ;
                                                                                                            dcterms:identifier "discussion_montanelli_1" ;
                                                                                                            rdfs:label "The discussion that arises from different stakeholders' perspectives on Montanelli statue controversy" .
 
@@ -1471,7 +1420,9 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_savile_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_savile_1> rdf:type owl:NamedIndividual ,
                                                                                                                 deo:Discussion ;
-                                                                                                       mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actionUndefined/actionUndefined_action> ;
+                                                                                                       mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_contextualization> ,
+                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_keeping> ,
+                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_removal> ;
                                                                                                        dcterms:identifier "discussion_savile_1" ;
                                                                                                        rdfs:label "The discussion that arises from different stakeholders' perspectives on Savile statue controversy" .
 
@@ -1479,7 +1430,9 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_stalin_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_stalin_1> rdf:type owl:NamedIndividual ,
                                                                                                                 deo:Discussion ;
-                                                                                                       mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actionUndefined/actionUndefined_action> ;
+                                                                                                       mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_contextualization> ,
+                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_keeping> ,
+                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_removal> ;
                                                                                                        dcterms:identifier "discussion_stalin_1" ;
                                                                                                        rdfs:label "The discussion that arises from different stakeholders' perspectives on Stalin statue controversy" .
 
@@ -1487,7 +1440,9 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_vieira_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_vieira_1> rdf:type owl:NamedIndividual ,
                                                                                                                 deo:Discussion ;
-                                                                                                       mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/actionUndefined/actionUndefined_action> ;
+                                                                                                       mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_contextualization> ,
+                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_keeping> ,
+                                                                                                                     <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_removal> ;
                                                                                                        dcterms:identifier "discussion_vieira_1" ;
                                                                                                        rdfs:label "The discussion that arises from different stakeholders' perspectives on Vieira statue controversy" .
 
@@ -1495,7 +1450,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_wollstonecraft_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_wollstonecraft_1> rdf:type owl:NamedIndividual ,
                                                                                                                         deo:Discussion ;
-                                                                                                               mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/replacement/replacement_action> ;
+                                                                                                               mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_replacement> ;
                                                                                                                dcterms:identifier "discussion_wollstonecraft_1" ;
                                                                                                                rdfs:label "The discussion that arises from different stakeholders' perspectives on Wollstonecraftstatue controversy" .
 
@@ -3194,70 +3149,70 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colbert
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colbert> rdf:type owl:NamedIndividual ,
-                                                                                                                         crm:E26 ;
+                                                                                                                         crm:E26_Physical_Feature ;
                                                                                                                 dcterms:identifier "physicalFeature_colbert" ;
                                                                                                                 rdfs:label "Colbert is represented seated, dressed in formal seventeenth-century attire, holding a document" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colombo
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colombo> rdf:type owl:NamedIndividual ,
-                                                                                                                         crm:E26 ;
+                                                                                                                         crm:E26_Physical_Feature ;
                                                                                                                 dcterms:identifier "physicalFeature_colombo" ;
                                                                                                                 rdfs:label "Columbus standing atop a pedestal, extending a finger to point toward something ahead" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colston
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_colston> rdf:type owl:NamedIndividual ,
-                                                                                                                         crm:E26 ;
+                                                                                                                         crm:E26_Physical_Feature ;
                                                                                                                 dcterms:identifier "physicalFeature_colston" ;
                                                                                                                 rdfs:label "Edward Colston is depicted standing upright, dressed in formal seventeenth-century attire" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_gandhi
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_gandhi> rdf:type owl:NamedIndividual ,
-                                                                                                                        crm:E26 ;
+                                                                                                                        crm:E26_Physical_Feature ;
                                                                                                                dcterms:identifier "physicalFeature_gandhi" ;
                                                                                                                rdfs:label "Gandhi depicted in a traditional dhoti, holding a walking stick in one arm" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_hagenbeck
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_hagenbeck> rdf:type owl:NamedIndividual ,
-                                                                                                                           crm:E26 ;
+                                                                                                                           crm:E26_Physical_Feature ;
                                                                                                                   dcterms:identifier "physicalFeature_hagenbeck" ;
                                                                                                                   rdfs:label "Hagenbeck is represented standing while he pets a lion next to him" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_montanelli
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_montanelli> rdf:type owl:NamedIndividual ,
-                                                                                                                            crm:E26 ;
+                                                                                                                            crm:E26_Physical_Feature ;
                                                                                                                    dcterms:identifier "physicalFeature_montanelli" ;
                                                                                                                    rdfs:label "Indro Montanelli seated while typing on his Olivetti" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_savile
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_savile> rdf:type owl:NamedIndividual ,
-                                                                                                                        crm:E26 ;
+                                                                                                                        crm:E26_Physical_Feature ;
                                                                                                                dcterms:identifier "physicalFeature_savile" ;
                                                                                                                rdfs:label "Life-size bronze statue portraying Jimmy Savile in casual clothing, standing in a relaxed pose." .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_stalin
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_stalin> rdf:type owl:NamedIndividual ,
-                                                                                                                        crm:E26 ;
+                                                                                                                        crm:E26_Physical_Feature ;
                                                                                                                dcterms:identifier "physicalFeature_stalin" ;
                                                                                                                rdfs:label "Joseph Stalin is depicted in military attire, he dominates the surrounding public space." .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_vieira
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_vieira> rdf:type owl:NamedIndividual ,
-                                                                                                                        crm:E26 ;
+                                                                                                                        crm:E26_Physical_Feature ;
                                                                                                                dcterms:identifier "physicalFeature_vieira" ;
                                                                                                                rdfs:label "Vieira is depicted standing, holding a cross aloft, surrounded by Indigenous children at his feet." .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_wollstonecraft
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/physicalFeature/physicalFeature_wollstonecraft> rdf:type owl:NamedIndividual ,
-                                                                                                                                crm:E26 ;
+                                                                                                                                crm:E26_Physical_Feature ;
                                                                                                                        dcterms:identifier "physicalFeature_wollstonecraft" ;
                                                                                                                        rdfs:label "The sculpture depicts abstract female forms merging into an organic mass that culminates in a small nude figurine" .
 
@@ -3494,7 +3449,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_colbert
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_colbert> rdf:type owl:NamedIndividual ,
-                                                                                                               crm:E12 ;
+                                                                                                               crm:E12_Production ;
                                                                                                       crm:P17 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_centralisation> ,
                                                                                                               <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_mercantilism> ,
                                                                                                               <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_patronage> ;
@@ -3504,7 +3459,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_colombo
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_colombo> rdf:type owl:NamedIndividual ,
-                                                                                                               crm:E12 ;
+                                                                                                               crm:E12_Production ;
                                                                                                       crm:P17 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_exploration> ;
                                                                                                       dcterms:identifier "production_colombo" ;
                                                                                                       rdfs:label "The activity of producing the statue of Colombo" .
@@ -3512,7 +3467,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_colston
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_colston> rdf:type owl:NamedIndividual ,
-                                                                                                               crm:E12 ;
+                                                                                                               crm:E12_Production ;
                                                                                                       crm:P17 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions> ,
                                                                                                               <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
                                                                                                       dcterms:identifier "production_colston" ;
@@ -3521,7 +3476,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_gandhi
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_gandhi> rdf:type owl:NamedIndividual ,
-                                                                                                              crm:E12 ;
+                                                                                                              crm:E12_Production ;
                                                                                                      crm:P17 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_contested_racism> ,
                                                                                                              <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_indian_independence> ,
                                                                                                              <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_nonviolent_resistance> ;
@@ -3531,7 +3486,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_hagenbeck
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_hagenbeck> rdf:type owl:NamedIndividual ,
-                                                                                                                 crm:E12 ;
+                                                                                                                 crm:E12_Production ;
                                                                                                         crm:P17 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_animal_welfare> ,
                                                                                                                 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_zoo_design> ;
                                                                                                         dcterms:identifier "production_hagenbeck" ;
@@ -3540,7 +3495,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_montanelli
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_montanelli> rdf:type owl:NamedIndividual ,
-                                                                                                                  crm:E12 ;
+                                                                                                                  crm:E12_Production ;
                                                                                                          crm:P17 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_journalism> ;
                                                                                                          dcterms:identifier "production_montanelli" ;
                                                                                                          rdfs:label "The activity of producing the statue of Montanelli" .
@@ -3548,7 +3503,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_savile
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_savile> rdf:type owl:NamedIndividual ,
-                                                                                                              crm:E12 ;
+                                                                                                              crm:E12_Production ;
                                                                                                      crm:P17 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions> ,
                                                                                                              <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_fundraising> ,
                                                                                                              <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ,
@@ -3559,7 +3514,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_stalin
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_stalin> rdf:type owl:NamedIndividual ,
-                                                                                                              crm:E12 ;
+                                                                                                              crm:E12_Production ;
                                                                                                      crm:P17 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_industrialisation> ,
                                                                                                              <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_personality_cult> ,
                                                                                                              <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_state_socialism> ;
@@ -3569,7 +3524,7 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_vieira
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_vieira> rdf:type owl:NamedIndividual ,
-                                                                                                              crm:E12 ;
+                                                                                                              crm:E12_Production ;
                                                                                                      crm:P17 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_advocacy> ,
                                                                                                              <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality> ;
                                                                                                      dcterms:identifier "production_vieira" ;
@@ -3578,26 +3533,12 @@ mdo:Replacement rdf:type owl:NamedIndividual .
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_wollstonecraft
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/production/production_wollstonecraft> rdf:type owl:NamedIndividual ,
-                                                                                                                      crm:E12 ;
+                                                                                                                      crm:E12_Production ;
                                                                                                              crm:P17 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philosophy> ,
                                                                                                                      <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_women_rights> ,
                                                                                                                      <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_writing> ;
                                                                                                              dcterms:identifier "production_wollstonecraft" ;
                                                                                                              rdfs:label "The activity of producing the statue of Wollstonecraft" .
-
-
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/relocation/relocation_action
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/relocation/relocation_action> rdf:type owl:NamedIndividual ,
-                                                                                                              mdo:Relocation ;
-                                                                                                     dcterms:identifier "relocation_action" ;
-                                                                                                     rdfs:label "Relocation" .
-
-
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/replacement/replacement_action
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/replacement/replacement_action> rdf:type owl:NamedIndividual ,
-                                                                                                                mdo:Replacement ;
-                                                                                                       dcterms:identifier "replacement_action" ;
-                                                                                                       rdfs:label "Replace the statue with a new one" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist
@@ -4332,6 +4273,48 @@ mdo:Replacement rdf:type owl:NamedIndividual .
                                                                                                                    time:hasEnd <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/instant/instant_end_wollstonecraft_2> ;
                                                                                                                    dcterms:identifier "timeInterval_wollstonecraft_2" ;
                                                                                                                    rdfs:label "The duration of the stakeholder’s involvement in Wollstonecraft's protest." .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_contextualization
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_contextualization> rdf:type owl:NamedIndividual ,
+                                                                                                             crm:E55_Type ;
+                                                                                                    dcterms:identifier "type_contextualization" ;
+                                                                                                    rdfs:label "Contextualization" .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_demolition
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_demolition> rdf:type owl:NamedIndividual ,
+                                                                                                      crm:E55_Type ;
+                                                                                             dcterms:identifier "type_demolition" ;
+                                                                                             rdfs:label "Demolition" .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_keeping
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_keeping> rdf:type owl:NamedIndividual ,
+                                                                                                   crm:E55_Type ;
+                                                                                          dcterms:identifier "type_keeping" ;
+                                                                                          rdfs:label "Keeping" .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_relocation
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_relocation> rdf:type owl:NamedIndividual ,
+                                                                                                      crm:E55_Type ;
+                                                                                             dcterms:identifier "type_relocation" ;
+                                                                                             rdfs:label "Relocation" .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_removal
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_removal> rdf:type owl:NamedIndividual ,
+                                                                                                   crm:E55_Type ;
+                                                                                          dcterms:identifier "type_removal" ;
+                                                                                          rdfs:label "Removal" .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_replacement
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/type/type_replacement> rdf:type owl:NamedIndividual ,
+                                                                                                       crm:E55_Type ;
+                                                                                              dcterms:identifier "type_replacement" ;
+                                                                                              rdfs:label "Replacement of the statue with a new one" .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural
