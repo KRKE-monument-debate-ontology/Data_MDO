@@ -423,6 +423,10 @@ ceon-actor:participatingActor a owl:ObjectProperty .
 
 ns1:hasMaterialComponent a owl:ObjectProperty .
 
+<http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_demolition> a crm:E55_Type ;
+    rdfs:label "Demolition"^^xsd:string ;
+    dcterms:identifier "type_demolition"^^xsd:string .
+
 crm:P108 a owl:ObjectProperty .
 
 crm:P17 a owl:ObjectProperty .
@@ -443,11 +447,9 @@ time:hasEnd a owl:ObjectProperty .
 
 time:inXSDgYearMonth a owl:DatatypeProperty .
 
-mdo:ActionProposal crm:P2 mdo:Contextualization,
-        mdo:Keeping,
-        mdo:Relocation,
-        mdo:Removal,
-        mdo:Replacement .
+mdo:ActionProposal crm:P2 crm:E55_Type .
+
+mdo:Remedy crm:P2 crm:E55_Type .
 
 mdo:emergesFrom a owl:ObjectProperty .
 
@@ -466,6 +468,8 @@ mdo:justifiedWithValue a owl:ObjectProperty .
 mdo:reflectsHeritageOf a owl:ObjectProperty .
 
 mdo:resultsIn a owl:ObjectProperty .
+
+mdo:resultsInto a owl:ObjectProperty .
 
 mdo:subject a owl:ObjectProperty .
 
@@ -888,6 +892,10 @@ dio:supports a owl:ObjectProperty .
 <http://www.cidoc-crm.org/cidoc-crm/E39_Actor/actor_vito_tongiani> a crm:E39_Actor ;
     rdfs:label "Vito Tongiani"^^xsd:string ;
     dcterms:identifier "actor_vito_tongiani"^^xsd:string .
+
+<http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_replacement> a crm:E55_Type ;
+    rdfs:label "Replacement of the statue with a new one"^^xsd:string ;
+    dcterms:identifier "type_replacement"^^xsd:string .
 
 <http://www.ontologydesignpatterns.org/cp/owl/participantRole.owlRole/role_organizer> a pr:Role ;
     rdfs:label "Organizer"^^xsd:string ;
@@ -1524,59 +1532,67 @@ dio:supports a owl:ObjectProperty .
     rdfs:label "Public space along the A82, Glencoe Village"^^xsd:string ;
     dcterms:identifier "debateSetting_11"^^xsd:string .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Replacement/replacement_action> a mdo:Replacement ;
-    rdfs:label "Replace the statue with a new one"^^xsd:string ;
-    dcterms:identifier "replacement_action"^^xsd:string .
-
 <http://purl.org/spar/deo/Discussion/discussion_colbert_1> a deo:Discussion ;
     rdfs:label "The discussion that arises from different stakeholders' perspectives on Colbert statue controversy"^^xsd:string ;
     dcterms:identifier "discussion_colbert_1"^^xsd:string ;
-    mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionUndefined/actionUndefined_action> .
+    mdo:resultsIn <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_contextualization>,
+        <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_keeping>,
+        <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_removal> .
 
 <http://purl.org/spar/deo/Discussion/discussion_colombo_1> a deo:Discussion ;
     rdfs:label "The discussion that arises from different stakeholders' perspectives on Colombo statue controversy"^^xsd:string ;
     dcterms:identifier "discussion_colombo_1"^^xsd:string ;
-    mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Relocation/relocation_action> .
+    mdo:resultsIn <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_relocation> .
 
 <http://purl.org/spar/deo/Discussion/discussion_colston_1> a deo:Discussion ;
     rdfs:label "The discussion that arises from different stakeholders' perspectives on Colston statue controversy"^^xsd:string ;
     dcterms:identifier "discussion_colston_1"^^xsd:string ;
-    mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Relocation/relocation_action> .
+    mdo:resultsIn <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_relocation> .
 
 <http://purl.org/spar/deo/Discussion/discussion_gandhi_1> a deo:Discussion ;
     rdfs:label "The discussion that arises from different stakeholders' perspectives on Gandhi statue controversy"^^xsd:string ;
     dcterms:identifier "discussion_gandhi_1"^^xsd:string ;
-    mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Relocation/relocation_action> .
+    mdo:resultsIn <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_relocation> .
 
 <http://purl.org/spar/deo/Discussion/discussion_hagenbeck_1> a deo:Discussion ;
     rdfs:label "The discussion that arises from different stakeholders' perspectives on Hagenbeck statue controversy"^^xsd:string ;
     dcterms:identifier "discussion_hagenbeck_1"^^xsd:string ;
-    mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionUndefined/actionUndefined_action> .
+    mdo:resultsIn <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_contextualization>,
+        <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_keeping>,
+        <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_removal> .
 
 <http://purl.org/spar/deo/Discussion/discussion_montanelli_1> a deo:Discussion ;
     rdfs:label "The discussion that arises from different stakeholders' perspectives on Montanelli statue controversy"^^xsd:string ;
     dcterms:identifier "discussion_montanelli_1"^^xsd:string ;
-    mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionUndefined/actionUndefined_action> .
+    mdo:resultsIn <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_contextualization>,
+        <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_keeping>,
+        <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_removal> .
 
 <http://purl.org/spar/deo/Discussion/discussion_savile_1> a deo:Discussion ;
     rdfs:label "The discussion that arises from different stakeholders' perspectives on Savile statue controversy"^^xsd:string ;
     dcterms:identifier "discussion_savile_1"^^xsd:string ;
-    mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionUndefined/actionUndefined_action> .
+    mdo:resultsIn <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_contextualization>,
+        <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_keeping>,
+        <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_removal> .
 
 <http://purl.org/spar/deo/Discussion/discussion_stalin_1> a deo:Discussion ;
     rdfs:label "The discussion that arises from different stakeholders' perspectives on Stalin statue controversy"^^xsd:string ;
     dcterms:identifier "discussion_stalin_1"^^xsd:string ;
-    mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionUndefined/actionUndefined_action> .
+    mdo:resultsIn <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_contextualization>,
+        <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_keeping>,
+        <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_removal> .
 
 <http://purl.org/spar/deo/Discussion/discussion_vieira_1> a deo:Discussion ;
     rdfs:label "The discussion that arises from different stakeholders' perspectives on Vieira statue controversy"^^xsd:string ;
     dcterms:identifier "discussion_vieira_1"^^xsd:string ;
-    mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionUndefined/actionUndefined_action> .
+    mdo:resultsIn <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_contextualization>,
+        <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_keeping>,
+        <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_removal> .
 
 <http://purl.org/spar/deo/Discussion/discussion_wollstonecraft_1> a deo:Discussion ;
     rdfs:label "The discussion that arises from different stakeholders' perspectives on Wollstonecraftstatue controversy"^^xsd:string ;
     dcterms:identifier "discussion_wollstonecraft_1"^^xsd:string ;
-    mdo:resultsIn <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Replacement/replacement_action> .
+    mdo:resultsIn <http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_replacement> .
 
 <http://w3id.org/CEON/ontology/actor/Stakeholder/stakeholder_colbert_2> a ceon-actor:Stakeholder ;
     rdfs:label "The current French government supported by the far-right politicians"^^xsd:string ;
@@ -2050,6 +2066,10 @@ dio:supports a owl:ObjectProperty .
     mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Value/value_artistic_cultural> ;
     dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Argument/argument_wollstonecraft_2> .
 
+<http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_relocation> a crm:E55_Type ;
+    rdfs:label "Relocation"^^xsd:string ;
+    dcterms:identifier "type_relocation"^^xsd:string .
+
 <http://www.w3.org/2004/02/skos/core#Concept/heritageConcept_authoritarianism> a skos:Concept ;
     rdfs:label "Authoritarianism"^^xsd:string ;
     dcterms:identifier "heritageConcept_authoritarianism"^^xsd:string .
@@ -2257,10 +2277,6 @@ dio:supports a owl:ObjectProperty .
     rdfs:label "Pro Removal perspective on Savile statue controversy"^^xsd:string ;
     dcterms:identifier "proRemoval_savile"^^xsd:string ;
     mdo:emergesFrom <http://purl.org/spar/deo/Discussion/discussion_savile_1> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Relocation/relocation_action> a mdo:Relocation ;
-    rdfs:label "Relocation"^^xsd:string ;
-    dcterms:identifier "relocation_action"^^xsd:string .
 
 <http://dbpedia.org/ontology/Monument/monument_colbert> a dbo:Monument ;
     dcterms:date "1806"^^xsd:gYear ;
@@ -2557,6 +2573,18 @@ dio:supports a owl:ObjectProperty .
         <http://www.w3.org/2004/02/skos/core#Concept/heritageConcept_slavery> ;
     mdo:triggeredControversy <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Controversy/controversy_vieira> .
 
+<http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_contextualization> a crm:E55_Type ;
+    rdfs:label "Contextualization"^^xsd:string ;
+    dcterms:identifier "type_contextualization"^^xsd:string .
+
+<http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_keeping> a crm:E55_Type ;
+    rdfs:label "Keeping"^^xsd:string ;
+    dcterms:identifier "type_keeping"^^xsd:string .
+
+<http://www.cidoc-crm.org/cidoc-crm/E55_Type/type_removal> a crm:E55_Type ;
+    rdfs:label "Removal"^^xsd:string ;
+    dcterms:identifier "type_removal"^^xsd:string .
+
 <http://www.ontologydesignpatterns.org/cp/owl/participantRole.owlRole/role_authority> a pr:Role ;
     rdfs:label "City authority"^^xsd:string ;
     dcterms:identifier "role_authority"^^xsd:string .
@@ -2568,10 +2596,6 @@ dio:supports a owl:ObjectProperty .
 <http://www.w3.org/2004/02/skos/core#Concept/heritageConcept_pedophilia> a skos:Concept ;
     rdfs:label "Pedophilia"^^xsd:string ;
     dcterms:identifier "heritageConcept_pedophilia"^^xsd:string .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionUndefined/actionUndefined_action> a mdo:ActionUndefined ;
-    rdfs:label "The discussion among the stakeholders did not lead to a remedy action"^^xsd:string ;
-    dcterms:identifier "actionUndefined_action"^^xsd:string .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/DebateSetting/debateSetting_8> a mdo:DebateSetting ;
     rdfs:label "The city centre of Bristol"^^xsd:string ;

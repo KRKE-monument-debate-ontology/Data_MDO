@@ -38,6 +38,7 @@ namespaces = {
 # classes mapping
 classes = { 
     "monument": dbo.Monument,
+    "type": crm.E55_Type,
     "historicalFigure": mdo.HistoricalFigure,
     "heritageConcept": SKOS.Concept,
     "legacy": mdo.Legacy,
@@ -62,15 +63,12 @@ classes = {
     "contextualMaterial": mdo.ContextualMaterial,
     "debateSetting": mdo.DebateSetting,
     "role": pr.Role,
-    "relocation": mdo.Relocation,
-    "replacement": mdo.Replacement,
-    "actionUndefined": mdo.ActionUndefined,
     "material": ceonMaterial.Material
 }
 
 
 # object properties
-op = ["crm:P62", "schema:location", "schema:creator", "schema:funder", "mdo:subject", "crm:P17", "crm:P108", "mdo:hasLegacyImpact", "schema:performerIn", "time:hasBeginning", "time:hasEnd", "tip:includesEvent", "tip:includesObject", "tip:forEntity", "tip:atTime", "mdo:justifiedWithValue", "ceon-actor:participatingActor", "ceon-actor:participatingActor", "mdo:holdsValue", "schema:knowsAbout", "dio:supports", "mdo:hasStance", "mdo:emergesFrom", "mdo:generates", "mdo:resultsIn", "mdo:reflectsHeritageOf", "crm:P56", "tip:hasRole", "tip:isSettingFor", "mdo:isContextualizedBy", "mdo:triggeredControversy", "crm:P2", "crm:P56", "ceon-material:hasMaterialComponent"]
+op = ["crm:P62", "schema:location", "schema:creator", "schema:funder", "mdo:subject", "crm:P17", "crm:P108", "mdo:hasLegacyImpact", "schema:performerIn", "time:hasBeginning", "time:hasEnd", "tip:includesEvent", "tip:includesObject", "tip:forEntity", "tip:atTime", "mdo:justifiedWithValue", "ceon-actor:participatingActor", "ceon-actor:participatingActor", "mdo:holdsValue", "schema:knowsAbout", "dio:supports", "mdo:hasStance", "mdo:emergesFrom", "mdo:generates", "mdo:resultsIn", "mdo:reflectsHeritageOf", "crm:P56", "tip:hasRole", "tip:isSettingFor", "mdo:isContextualizedBy", "mdo:triggeredControversy", "crm:P2", "crm:P56", "ceon-material:hasMaterialComponent", "mdo:resultsInto"]
 
 # initialize graph
 g = rdflib.Graph()
@@ -256,11 +254,8 @@ g.add((dcterms.date, RDF.type, OWL.DatatypeProperty))
 g.add((time.inXSDgYearMonth, RDF.type, OWL.DatatypeProperty))
 
 # add crm type for ActionProposal
-g.add((mdo.ActionProposal, crm.P2, mdo.Relocation))
-g.add((mdo.ActionProposal, crm.P2, mdo.Removal))
-g.add((mdo.ActionProposal, crm.P2, mdo.Keeping))
-g.add((mdo.ActionProposal, crm.P2, mdo.Replacement))
-g.add((mdo.ActionProposal, crm.P2, mdo.Contextualization))
+g.add((mdo.ActionProposal, crm.P2, crm.E55_Type))
+g.add((mdo.Remedy, crm.P2, crm.E55_Type))
 
 # turtle serialization
 print(g.serialize(destination="md-ontology/output.ttl", format="turtle"))
