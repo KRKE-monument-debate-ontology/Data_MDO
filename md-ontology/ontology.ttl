@@ -1,3 +1,4 @@
+@prefix : <https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl#> .
 @prefix pr: <http://www.ontologydesignpatterns.org/cp/owl/participantRole.owl> .
 @prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
@@ -16,25 +17,24 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix schema1: <http://schema.org/> .
 @prefix ceon-actor: <http://w3id.org/CEON/ontology/actor/> .
-@base <http://www.w3.org/2002/07/owl#> .
+@base <https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl> .
 
-[ rdf:type owl:Ontology ;
-   owl:imports dbo: ,
-               dcterms: ,
-               <http://purl.org/spar/pso/2015-07-03> ,
-               <http://w3id.org/CEON/ontology/actor/0.4/> ,
-               <http://w3id.org/CEON/ontology/material/0.4/> ,
-               <http://www.cidoc-crm.org/cidoc-crm/7.1.3/> ,
-               <http://www.w3.org/2004/02/skos/core> ,
-               <http://www.w3.org/2006/time#2016> ,
-               dio: ;
-   rdfs:comment """The ontology developed within this project aims to formally represent the phenomenon of statue removal as a specific manifestation of Cancel Culture. It provides a structured conceptual framework to describe, classify, and relate the main entities, actors, and processes involved in controversies surrounding public monuments associated with morally or socially contested historical figures.
-
+<https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl> rdf:type owl:Ontology ;
+                                                                                                                   owl:versionIRI <https://raw.githubusercontent.com/KRKE-monument-debate-ontology/Data_MDO/refs/heads/main/md-ontology/output.ttl> ;
+                                                                                                                   owl:imports dbo: ,
+                                                                                                                               dcterms: ,
+                                                                                                                               <http://purl.org/spar/pso/2015-07-03> ,
+                                                                                                                               schema1: ,
+                                                                                                                               <http://w3id.org/CEON/ontology/actor/0.4/> ,
+                                                                                                                               <http://w3id.org/CEON/ontology/material/0.4/> ,
+                                                                                                                               <http://www.cidoc-crm.org/cidoc-crm/7.1.3/> ,
+                                                                                                                               <http://www.w3.org/2004/02/skos/core> ,
+                                                                                                                               <http://www.w3.org/2006/time#2016> ,
+                                                                                                                               dio: ;
+                                                                                                                   rdfs:comment """The ontology developed within this project aims to formally represent the phenomenon of statue removal as a specific manifestation of Cancel Culture. It provides a structured conceptual framework to describe, classify, and relate the main entities, actors, and processes involved in controversies surrounding public monuments associated with morally or socially contested historical figures.
 The ontology serves both as an analytical tool for studying contested heritage and as a conceptual backbone for organizing case studies, enabling comparison across different contexts and supporting a deeper understanding of how societies confront problematic pasts through the transformation or removal of public symbols.
-
 The Monument Debate Ontology was created by Francesca Gaeta, Anna Pasetto, Matilde Passafaro, Alice Piazzi as final project of the course Knowledge Representation and Knowledge Extraction""" ;
-   rdfs:label "Monument Debate Ontology"
- ] .
+                                                                                                                   rdfs:label "Monument Debate Ontology" .
 
 #################################################################
 #    Object Properties
@@ -70,7 +70,7 @@ tip:includesEvent rdf:type owl:ObjectProperty ,
                            owl:AsymmetricProperty ,
                            owl:IrreflexiveProperty ;
                   rdfs:domain tip:TimeIndexedParticipation ;
-                  rdfs:range crm:E7_Activity .
+                  rdfs:range tip:Event .
 
 
 ###  http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/includesObject
@@ -244,11 +244,7 @@ mdo:hasStance rdf:type owl:ObjectProperty ,
                        owl:AsymmetricProperty ,
                        owl:IrreflexiveProperty ;
               rdfs:domain tip:TimeIndexedParticipation ;
-              rdfs:range [ rdf:type owl:Class ;
-                           owl:unionOf ( mdo:ProPreservation
-                                         mdo:ProRemoval
-                                       )
-                         ] .
+              rdfs:range mdo:Perspective .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/holdsValue
@@ -380,7 +376,7 @@ schema1:Place rdf:type owl:Class .
 
 
 ###  http://w3id.org/CEON/ontology/actor/Stakeholder
-ceon-actor:Stakeholder rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Conceptualizer> .
+ceon-actor:Stakeholder rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge> .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing
@@ -404,10 +400,6 @@ pr:Role rdf:type owl:Class .
 <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge> rdf:type owl:Class .
 
 
-###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Conceptualizer
-<http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Conceptualizer> rdf:type owl:Class .
-
-
 ###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Cut
 <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Cut> rdf:type owl:Class .
 
@@ -421,12 +413,7 @@ pr:Role rdf:type owl:Class .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionProposal
-mdo:ActionProposal rdf:type owl:Class ;
-                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                     owl:onProperty mdo:resultsInto ;
-                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                     owl:onClass mdo:Remedy
-                                   ] .
+mdo:ActionProposal rdf:type owl:Class .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Argument
@@ -436,6 +423,10 @@ mdo:Argument rdf:type owl:Class ;
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ContextualMaterial
 mdo:ContextualMaterial rdf:type owl:Class .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Contextualization
+mdo:Contextualization rdf:type owl:Class .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ControversialFact
@@ -450,13 +441,20 @@ mdo:Controversy rdf:type owl:Class .
 mdo:DebateSetting rdf:type owl:Class .
 
 
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Demolition
+mdo:Demolition rdf:type owl:Class .
+
+
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/HistoricalFigure
 mdo:HistoricalFigure rdf:type owl:Class .
 
 
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Keeping
+mdo:Keeping rdf:type owl:Class .
+
+
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Legacy
-mdo:Legacy rdf:type owl:Class ;
-           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge> .
+mdo:Legacy rdf:type owl:Class .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Perspective
@@ -474,8 +472,20 @@ mdo:ProRemoval rdf:type owl:Class ;
                rdfs:subClassOf mdo:Perspective .
 
 
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Relocation
+mdo:Relocation rdf:type owl:Class .
+
+
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Remedy
 mdo:Remedy rdf:type owl:Class .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Removal
+mdo:Removal rdf:type owl:Class .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Replacement
+mdo:Replacement rdf:type owl:Class .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Value
@@ -486,6 +496,20 @@ mdo:Value rdf:type owl:Class ;
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://www.cidoc-crm.org/cidoc-crm/E55_Type
+crm:E55_Type rdf:type owl:NamedIndividual .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionProposal
+mdo:ActionProposal rdf:type owl:NamedIndividual ;
+                   crm:P2 crm:E55_Type .
+
+
+###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Remedy
+mdo:Remedy rdf:type owl:NamedIndividual ;
+           crm:P2 crm:E55_Type .
+
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colbert_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colbert_1> rdf:type owl:NamedIndividual ,
@@ -2687,7 +2711,7 @@ mdo:Value rdf:type owl:Class ;
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_colbert_2> rdf:type owl:NamedIndividual ,
                                                                                                                        tip:TimeIndexedParticipation ;
                                                                                                               tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_colbert_2> ;
-                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colbert_1> ;
+                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colbert_2> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_authority> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colbert_1> ;
                                                                                                               tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colbert> ;
@@ -2743,7 +2767,7 @@ mdo:Value rdf:type owl:Class ;
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_colston_2> rdf:type owl:NamedIndividual ,
                                                                                                                        tip:TimeIndexedParticipation ;
                                                                                                               tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_colston_2> ;
-                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_1> ;
+                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_2> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_1> ;
                                                                                                               tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
@@ -2757,7 +2781,7 @@ mdo:Value rdf:type owl:Class ;
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_colston_3> rdf:type owl:NamedIndividual ,
                                                                                                                        tip:TimeIndexedParticipation ;
                                                                                                               tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_colston_3> ;
-                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_2> ;
+                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_3> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_2> ;
                                                                                                               tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
@@ -2771,7 +2795,7 @@ mdo:Value rdf:type owl:Class ;
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_colston_4> rdf:type owl:NamedIndividual ,
                                                                                                                        tip:TimeIndexedParticipation ;
                                                                                                               tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_colston_4> ;
-                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_2> ;
+                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_4> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_authority> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_2> ;
                                                                                                               tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
@@ -2785,7 +2809,7 @@ mdo:Value rdf:type owl:Class ;
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_colston_5> rdf:type owl:NamedIndividual ,
                                                                                                                        tip:TimeIndexedParticipation ;
                                                                                                               tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_colston_5> ;
-                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_3> ;
+                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_5> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_3> ;
                                                                                                               tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
@@ -2800,7 +2824,7 @@ mdo:Value rdf:type owl:Class ;
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_colston_6> rdf:type owl:NamedIndividual ,
                                                                                                                        tip:TimeIndexedParticipation ;
                                                                                                               tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_colston_6> ;
-                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_3> ;
+                                                                                                              tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_6> ;
                                                                                                               tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_authority> ;
                                                                                                               tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_3> ;
                                                                                                               tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
@@ -3081,7 +3105,7 @@ mdo:Value rdf:type owl:Class ;
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_vieira_2> rdf:type owl:NamedIndividual ,
                                                                                                                       tip:TimeIndexedParticipation ;
                                                                                                              tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_vieira_2> ;
-                                                                                                             tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_1> ;
+                                                                                                             tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_2> ;
                                                                                                              tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                              tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_1> ;
                                                                                                              tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> ;
@@ -3095,7 +3119,7 @@ mdo:Value rdf:type owl:Class ;
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_vieira_3> rdf:type owl:NamedIndividual ,
                                                                                                                       tip:TimeIndexedParticipation ;
                                                                                                              tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_vieira_3> ;
-                                                                                                             tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_2> ;
+                                                                                                             tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_3> ;
                                                                                                              tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                              tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_2> ;
                                                                                                              tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> ;
@@ -3109,7 +3133,7 @@ mdo:Value rdf:type owl:Class ;
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_vieira_4> rdf:type owl:NamedIndividual ,
                                                                                                                       tip:TimeIndexedParticipation ;
                                                                                                              tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_vieira_4> ;
-                                                                                                             tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_2> ;
+                                                                                                             tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_4> ;
                                                                                                              tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
                                                                                                              tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_2> ;
                                                                                                              tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> ;
