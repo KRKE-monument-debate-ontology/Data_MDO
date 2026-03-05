@@ -99,7 +99,7 @@ mdo:justifiedWithValue a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_colbert_2> a tip:TimeIndexedParticipation ;
     rdfs:label "Participation in the protest about Colbert's statue"^^xsd:string ;
     tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_colbert_2> ;
-    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colbert_1> ;
+    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colbert_2> ;
     tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_authority> ;
     tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colbert_1> ;
     tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colbert> ;
@@ -143,7 +143,7 @@ mdo:justifiedWithValue a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_colston_2> a tip:TimeIndexedParticipation ;
     rdfs:label "Participation in the protest about Colston's statue"^^xsd:string ;
     tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_colston_2> ;
-    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_1> ;
+    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_2> ;
     tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
     tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_1> ;
     tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
@@ -154,7 +154,7 @@ mdo:justifiedWithValue a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_colston_3> a tip:TimeIndexedParticipation ;
     rdfs:label "Participation in the protest about Colston's statue"^^xsd:string ;
     tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_colston_3> ;
-    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_2> ;
+    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_3> ;
     tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
     tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_2> ;
     tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
@@ -165,7 +165,7 @@ mdo:justifiedWithValue a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_colston_4> a tip:TimeIndexedParticipation ;
     rdfs:label "Participation in the protest about Colston's statue"^^xsd:string ;
     tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_colston_4> ;
-    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_2> ;
+    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_4> ;
     tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_authority> ;
     tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_2> ;
     tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
@@ -176,7 +176,7 @@ mdo:justifiedWithValue a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_colston_5> a tip:TimeIndexedParticipation ;
     rdfs:label "Participation in the protest about Colston's statue"^^xsd:string ;
     tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_colston_5> ;
-    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_3> ;
+    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_5> ;
     tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
     tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_3> ;
     tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
@@ -188,7 +188,7 @@ mdo:justifiedWithValue a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_colston_6> a tip:TimeIndexedParticipation ;
     rdfs:label "Participation in the protest about Colston's statue"^^xsd:string ;
     tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_colston_6> ;
-    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_3> ;
+    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_6> ;
     tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_authority> ;
     tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colston_3> ;
     tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_colston> ;
@@ -409,7 +409,7 @@ mdo:justifiedWithValue a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_vieira_2> a tip:TimeIndexedParticipation ;
     rdfs:label "Participation in the protest about Vieira's statue"^^xsd:string ;
     tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_vieira_2> ;
-    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_1> ;
+    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_2> ;
     tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
     tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_1> ;
     tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> ;
@@ -420,7 +420,7 @@ mdo:justifiedWithValue a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_vieira_3> a tip:TimeIndexedParticipation ;
     rdfs:label "Participation in the protest about Vieira's statue"^^xsd:string ;
     tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_vieira_3> ;
-    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_2> ;
+    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_3> ;
     tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
     tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_2> ;
     tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> ;
@@ -431,7 +431,7 @@ mdo:justifiedWithValue a owl:ObjectProperty .
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/participation/participation_vieira_4> a tip:TimeIndexedParticipation ;
     rdfs:label "Participation in the protest about Vieira's statue"^^xsd:string ;
     tip:atTime <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/timeInterval/timeInterval_vieira_4> ;
-    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_2> ;
+    tip:forEntity <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_4> ;
     tip:hasRole <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/role/role_activist> ;
     tip:includesEvent <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_vieira_2> ;
     tip:includesObject <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/monument/monument_vieira> ;
@@ -1801,63 +1801,6 @@ dio:supports a owl:ObjectProperty .
     dcterms:identifier "proRemoval_wollstonecraft"^^xsd:string ;
     mdo:emergesFrom <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_wollstonecraft_1> .
 
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colbert_2> a ceon-actor:Stakeholder ;
-    rdfs:label "The current French government supported by the far-right politicians"^^xsd:string ;
-    dcterms:identifier "stakeholder_colbert_2"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_centralisation>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_mercantilism>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_patronage> ;
-    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking> ;
-    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colbert_2> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_4> a ceon-actor:Stakeholder ;
-    rdfs:label "The city authority"^^xsd:string ;
-    dcterms:identifier "stakeholder_colston_4"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
-    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
-    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_2> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_5> a ceon-actor:Stakeholder ;
-    rdfs:label "multi-ethnic group of protesters"^^xsd:string ;
-    dcterms:identifier "stakeholder_colston_5"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
-    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking> ;
-    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_6> a ceon-actor:Stakeholder ;
-    rdfs:label "Mayor Marvin Rees and the Bristol History Commission"^^xsd:string ;
-    dcterms:identifier "stakeholder_colston_6"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
-    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
-    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_3> a ceon-actor:Stakeholder ;
-    rdfs:label "Joana, a 25-year-old activist"^^xsd:string ;
-    dcterms:identifier "stakeholder_vieira_3"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_advocacy>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality> ;
-    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
-    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_1> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_4> a ceon-actor:Stakeholder ;
-    rdfs:label "Miguel, a 58-year-old historian"^^xsd:string ;
-    dcterms:identifier "stakeholder_vieira_4"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_advocacy>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality> ;
-    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
-    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_2> .
-
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_decolonization> a mdo:Value ;
     rdfs:label "Decolonization"^^xsd:string ;
     dcterms:identifier "value_decolonization"^^xsd:string ;
@@ -2081,6 +2024,26 @@ dio:supports a owl:ObjectProperty .
     dcterms:identifier "proRemoval_savile"^^xsd:string ;
     mdo:emergesFrom <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_savile_1> .
 
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colbert_1> a ceon-actor:Stakeholder ;
+    rdfs:label "The activist Franco Lollia, member of the Brigade Anti Négrophobie"^^xsd:string ;
+    dcterms:identifier "stakeholder_colbert_1"^^xsd:string ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_centralisation>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_mercantilism>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_patronage> ;
+    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colbert_1> .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colbert_2> a ceon-actor:Stakeholder ;
+    rdfs:label "The current French government supported by the far-right politicians"^^xsd:string ;
+    dcterms:identifier "stakeholder_colbert_2"^^xsd:string ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_centralisation>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_mercantilism>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_patronage> ;
+    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking> ;
+    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colbert_2> .
+
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colombo_1> a ceon-actor:Stakeholder ;
     rdfs:label "Maya Johnson, sociology junior and leader in the school’s Diversity and Inclusion group"^^xsd:string ;
     dcterms:identifier "stakeholder_colombo_1"^^xsd:string ;
@@ -2097,6 +2060,62 @@ dio:supports a owl:ObjectProperty .
     mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
     dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colombo_2> .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_1> a ceon-actor:Stakeholder ;
+    rdfs:label "Aisha, 29, a local history teacher"^^xsd:string ;
+    dcterms:identifier "stakeholder_colston_1"^^xsd:string ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
+    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_2> a ceon-actor:Stakeholder ;
+    rdfs:label "Thomas, 63, a volunteer historian"^^xsd:string ;
+    dcterms:identifier "stakeholder_colston_2"^^xsd:string ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
+    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_2> .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_3> a ceon-actor:Stakeholder ;
+    rdfs:label "British sculptor and street artist Will Coles"^^xsd:string ;
+    dcterms:identifier "stakeholder_colston_3"^^xsd:string ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
+    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking> ;
+    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_4> a ceon-actor:Stakeholder ;
+    rdfs:label "The city authority"^^xsd:string ;
+    dcterms:identifier "stakeholder_colston_4"^^xsd:string ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
+    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_2> .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_5> a ceon-actor:Stakeholder ;
+    rdfs:label "multi-ethnic group of protesters"^^xsd:string ;
+    dcterms:identifier "stakeholder_colston_5"^^xsd:string ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
+    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking> ;
+    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_6> a ceon-actor:Stakeholder ;
+    rdfs:label "Mayor Marvin Rees and the Bristol History Commission"^^xsd:string ;
+    dcterms:identifier "stakeholder_colston_6"^^xsd:string ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
+    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_gandhi_1> a ceon-actor:Stakeholder ;
     rdfs:label "Professor Adomako Ampofo, the former Director of the Institute of African Studies at the University"^^xsd:string ;
@@ -2255,6 +2274,42 @@ dio:supports a owl:ObjectProperty .
     mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
         <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
     dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_stalin_1> .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_1> a ceon-actor:Stakeholder ;
+    rdfs:label "Anti-racist and postcolonial activists of the group Descolonizando"^^xsd:string ;
+    dcterms:identifier "stakeholder_vieira_1"^^xsd:string ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_advocacy>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality> ;
+    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_1> .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_2> a ceon-actor:Stakeholder ;
+    rdfs:label "Far-right activists"^^xsd:string ;
+    dcterms:identifier "stakeholder_vieira_2"^^xsd:string ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_advocacy>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality> ;
+    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
+    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_2> .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_3> a ceon-actor:Stakeholder ;
+    rdfs:label "Joana, a 25-year-old activist"^^xsd:string ;
+    dcterms:identifier "stakeholder_vieira_3"^^xsd:string ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_advocacy>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality> ;
+    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
+    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_1> .
+
+<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_4> a ceon-actor:Stakeholder ;
+    rdfs:label "Miguel, a 58-year-old historian"^^xsd:string ;
+    dcterms:identifier "stakeholder_vieira_4"^^xsd:string ;
+    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_advocacy>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality> ;
+    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
+        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
+    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_2> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_wollstonecraft_1> a ceon-actor:Stakeholder ;
     rdfs:label "Historian Dr Myriam Wilks-Heeg"^^xsd:string ;
@@ -2464,61 +2519,6 @@ dio:supports a owl:ObjectProperty .
     rdfs:label "Pro Removal perspective on Stalin statue controversy"^^xsd:string ;
     dcterms:identifier "proRemoval_stalin"^^xsd:string ;
     mdo:emergesFrom <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/discussion/discussion_stalin_1> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colbert_1> a ceon-actor:Stakeholder ;
-    rdfs:label "The activist Franco Lollia, member of the Brigade Anti Négrophobie"^^xsd:string ;
-    dcterms:identifier "stakeholder_colbert_1"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_centralisation>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_mercantilism>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_patronage> ;
-    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
-    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colbert_1> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_1> a ceon-actor:Stakeholder ;
-    rdfs:label "Aisha, 29, a local history teacher"^^xsd:string ;
-    dcterms:identifier "stakeholder_colston_1"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
-    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
-    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_2> a ceon-actor:Stakeholder ;
-    rdfs:label "Thomas, 63, a volunteer historian"^^xsd:string ;
-    dcterms:identifier "stakeholder_colston_2"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
-    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
-    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_2> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_colston_3> a ceon-actor:Stakeholder ;
-    rdfs:label "British sculptor and street artist Will Coles"^^xsd:string ;
-    dcterms:identifier "stakeholder_colston_3"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_charitable_actions>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_philanthropic_activities> ;
-    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_artistic_cultural>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_critical_thinking> ;
-    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_colston_1> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_1> a ceon-actor:Stakeholder ;
-    rdfs:label "Anti-racist and postcolonial activists of the group Descolonizando"^^xsd:string ;
-    dcterms:identifier "stakeholder_vieira_1"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_advocacy>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality> ;
-    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_human_dignity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_social_justice> ;
-    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_1> .
-
-<https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/stakeholder/stakeholder_vieira_2> a ceon-actor:Stakeholder ;
-    rdfs:label "Far-right activists"^^xsd:string ;
-    dcterms:identifier "stakeholder_vieira_2"^^xsd:string ;
-    schema1:knowsAbout <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_advocacy>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/legacy/legacy_religion_spirituality> ;
-    mdo:holdsValue <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_cultural_identity>,
-        <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/value/value_historical_memory> ;
-    dio:supports <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/argument/argument_vieira_2> .
 
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/debateSetting/debateSetting_5> a mdo:DebateSetting ;
     rdfs:label "Social Media"^^xsd:string ;
