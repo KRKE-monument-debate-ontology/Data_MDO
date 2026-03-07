@@ -376,7 +376,7 @@ schema1:Place rdf:type owl:Class .
 
 
 ###  http://w3id.org/CEON/ontology/actor/Stakeholder
-ceon-actor:Stakeholder rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge> .
+ceon-actor:Stakeholder rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Conceptualiser> .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Human-Made_Thing
@@ -398,6 +398,10 @@ pr:Role rdf:type owl:Class .
 
 ###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge
 <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Conceptualiser
+<http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Conceptualiser> rdf:type owl:Class .
 
 
 ###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Cut
@@ -454,7 +458,8 @@ mdo:Keeping rdf:type owl:Class .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Legacy
-mdo:Legacy rdf:type owl:Class .
+mdo:Legacy rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#BackgroundKnowledge> .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Perspective
