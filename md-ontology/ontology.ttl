@@ -69,7 +69,7 @@ tip:includesEvent rdf:type owl:ObjectProperty ,
                            owl:AsymmetricProperty ,
                            owl:IrreflexiveProperty ;
                   rdfs:domain tip:TimeIndexedParticipation ;
-                  rdfs:range <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Event> .
+                  rdfs:range <http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/TimeIndexedParticipation/Event> .
 
 
 ###  http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/includesObject
@@ -362,6 +362,10 @@ tip:TimeIndexedParticipation rdf:type owl:Class .
 tip:TimeInterval rdf:type owl:Class .
 
 
+###  http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/TimeIndexedParticipation/Event
+<http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/TimeIndexedParticipation/Event> rdf:type owl:Class .
+
+
 ###  http://schema.org/GovernmentOrganization
 schema1:GovernmentOrganization rdf:type owl:Class .
 
@@ -375,7 +379,7 @@ ceon-actor:Stakeholder rdfs:subClassOf <http://www.ontologydesignpatterns.org/on
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E7_Activity
-crm:E7_Activity rdfs:subClassOf <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Event> .
+crm:E7_Activity rdfs:subClassOf <http://ontologydesignpatterns.owl/cp/owl/timeindexedparticipation.owl/TimeIndexedParticipation/Event> .
 
 
 ###  http://www.ontologydesignpatterns.org/cp/owl/participantRole.owlRole
@@ -396,10 +400,6 @@ pr:Role rdf:type owl:Class .
 
 ###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Cut
 <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Cut> rdf:type owl:Class .
-
-
-###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Event
-<http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Event> rdf:type owl:Class .
 
 
 ###  http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#Eventuality
@@ -476,15 +476,6 @@ mdo:Value rdf:type owl:Class ;
 #################################################################
 #    Individuals
 #################################################################
-
-###  http://www.cidoc-crm.org/cidoc-crm/E55_Type
-crm:E55_Type rdf:type owl:NamedIndividual .
-
-
-###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionProposal
-mdo:ActionProposal rdf:type owl:NamedIndividual ;
-                   crm:P2 crm:E55_Type .
-
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colbert_1
 <https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/activity/activity_colbert_1> rdf:type owl:NamedIndividual ,
