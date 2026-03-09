@@ -283,7 +283,11 @@ mdo:resultsIn rdf:type owl:ObjectProperty ,
                        owl:AsymmetricProperty ,
                        owl:IrreflexiveProperty ;
               rdfs:domain deo:Discussion ;
-              rdfs:range mdo:ActionProposal .
+              rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( crm:E55_Type
+                                         mdo:ActionProposal
+                                       )
+                         ] .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/resultsInto
@@ -411,7 +415,12 @@ pr:Role rdf:type owl:Class .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/ActionProposal
-mdo:ActionProposal rdf:type owl:Class .
+mdo:ActionProposal rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty mdo:resultsInto ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass mdo:Remedy
+                                   ] .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Argument
@@ -460,7 +469,11 @@ mdo:ProRemoval rdf:type owl:Class ;
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Remedy
-mdo:Remedy rdf:type owl:Class .
+mdo:Remedy rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty crm:P2 ;
+                             owl:someValuesFrom crm:E55_Type
+                           ] .
 
 
 ###  https://github.com/KRKE-monument-debate-ontology/Data_MDO/md-ontology/Value
