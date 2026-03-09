@@ -53,6 +53,7 @@ classes = {
     "proPreservation": mdo.ProPreservation,
     "discussion": deo.Discussion,
     "actionProposal": mdo.ActionProposal,
+    "remedy": mdo.Remedy,
     "production": crm.E12_Production,
     "actor": crm.E39_Actor,
     "governmentOrganization": schema.GovernmentOrganization,
@@ -83,6 +84,7 @@ g.bind("mdo", mdo)
 g.bind("dio", dio)
 g.bind("deo", deo)
 g.bind("ceon-actor", ceonActor)
+g.bind("ceon-material", ceonMaterial)
 g.bind("tip", tip)
 g.bind("pr", pr)
 
@@ -180,7 +182,7 @@ class_id_alignment = {
     "cf": "controversialFact",
     "arg": "argument",
     "prod": "production",
-    "action": "actionProposal",
+    "proposal": "actionProposal",
     "mon": "monument",
     "heritage": "heritageConcept",
     "prorem": "proRemoval",
@@ -189,8 +191,7 @@ class_id_alignment = {
     "interval": "timeInterval",
     "feature": "physicalFeature",
     "setting": "debateSetting",
-    "contextualmaterial": "contextualMaterial",
-    "undefined": "actionUndefined"
+    "contextualmaterial": "contextualMaterial"
 }
 
 # function for aligning ids to class names
